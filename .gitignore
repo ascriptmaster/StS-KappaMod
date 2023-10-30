@@ -77,3 +77,9 @@ $RECYCLE.BIN/
 
 # Spriter files
 *.autosave.scml
+<<<<<<< HEAD
+=======
+
+# autocomplete_cards.rb temp files
+*-Strings-Fixed.json
+>>>>>>> 5615723 (I have been bullied into making a repository to commit my current changes.)

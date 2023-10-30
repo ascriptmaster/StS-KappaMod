@@ -1,0 +1,164 @@
+{
+  "KappaMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "KappaMod:AerialBlasterPower": {
+    "NAME": "Aerial Blaster",
+    "DESCRIPTIONS": [
+      "When attacked this turn, takes #b",
+      " damage."
+    ]
+  },
+  "KappaMod:GlimmeringDepthsPower": {
+    "NAME": "Glimmering Depths",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yDrown to ALL enemies."
+    ]
+  },
+  "KappaMod:EmpoweringBubblesPower": {
+    "NAME": "Empowering Bubbles",
+    "DESCRIPTIONS": [
+      "Each time a card is #yBubbled, it gains #b",
+      " damage and #yBlock this combat."
+    ]
+  },
+  "KappaMod:MountainRopewayPower": {
+    "NAME": "Mountain Ropeway",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yFloat #b",
+      "."
+    ]
+  },
+  "KappaMod:OpticalCamouflagePower": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTIONS": [
+      "Wears off if you take unblocked attack damage. At the start of your next turn, draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "KappaMod:HydroCamouflagePower": {
+    "NAME": "Hydro Camouflage",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would lose HP this round.",
+      "Prevent the next #b",
+      " times you would lose HP this round.",
+      " At the start of your next turn, gain [E] and draw 2 cards for each stack of this power remaining."
+    ]
+  },
+  "KappaMod:GenbuShellPower": {
+    "NAME": "Genbu Shell",
+    "DESCRIPTIONS": [
+      "Immune to the effects of being kappamod:Overheated for #b",
+      " turn.",
+      " turns."
+    ]
+  },
+  "KappaMod:SuperchargePower": {
+    "NAME": "Supercharged",
+    "DESCRIPTIONS": [
+      "At the end of your next turn, take #b",
+      " damage and lose #b",
+      " Strength."
+    ]
+  },
+  "KappaMod:BacklashPower": {
+    "NAME": "Backlash",
+    "DESCRIPTIONS": [
+      "At the end of your turn, take #b",
+      " damage."
+    ]
+  },
+  "KappaMod:CooledPower": {
+    "NAME": "Cooled",
+    "DESCRIPTIONS": [
+      "Gain kappamod:Cooled effects regardless of your kappamod:Heat."
+    ]
+  },
+  "KappaMod:FloodPower": {
+    "NAME": "Flood",
+    "DESCRIPTIONS": [
+      "Playing kappamod:Ripple effects will change Flood by #b",
+      ". Flood direction will change when it reaches #b",
+      "."
+    ]
+  },
+  "KappaMod:HydrometryPower": {
+    "NAME": "Hydrometry",
+    "DESCRIPTIONS": [
+      "The next card",
+      "The next #b",
+      "cards",
+      " you play applies its kappamod:Surging and kappamod:Receding effects regardless of your #yFlood."
+    ]
+  },
+  "KappaMod:BubbleBarrierPower": {
+    "NAME": "Bubble Barrier",
+    "DESCRIPTIONS": [
+      "The first time you are attacked, deal #b",
+      " damage back."
+    ]
+  },
+  "KappaMod:SubmergePower": {
+    "NAME": "Submerged",
+    "DESCRIPTIONS": [
+      "At the start of each round for the next #b",
+      " turn, ",
+      " turns, ",
+      "this creature gains #b",
+      " #yDrown."
+    ]
+  },
+  "KappaMod:DrownPower": {
+    "NAME": "Drown",
+    "DESCRIPTIONS": [
+      "At the end of your turn while #ySubmerged, lose #b",
+      "At the end of its turn while #ySubmerged, loses #b",
+      " HP. If not #ySubmerged, reduce #yDrown by half."
+    ]
+  },
+  "KappaMod:DrawReductionNextTurnPower": {
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " fewer card next turn.",
+      " fewer cards next turn."
+    ]
+  },
+  "KappaMod:NessiePower": {
+    "NAME": "Nessie",
+    "DESCRIPTIONS": [
+      "Each time you play an Attack, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "KappaMod:OozeFloodPower": {
+    "NAME": "Ooze Flooding",
+    "DESCRIPTIONS": [
+      "Each time you deal unblocked attack damage, apply #b",
+      " #ykappamod:Submerged and #b",
+      " #ykappamod:Drown."
+    ]
+  },
+  "KappaMod:OverflowPower": {
+    "NAME": "Overflow",
+    "DESCRIPTIONS": [
+      "This turn,",
+      "For the next #b",
+      " turns,",
+      " all your #ykappamod:Surging and #ykappamod:Receding effects apply."
+    ]
+  },
+  "KappaMod:RepulsorPower": {
+    "NAME": "Repulsor Shield",
+    "DESCRIPTIONS": [
+      "When attacked, applies #b",
+      " #yWeak back."
+    ]
+  }
+}

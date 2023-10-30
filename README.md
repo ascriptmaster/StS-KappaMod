@@ -50,3 +50,11 @@ https://mega.nz/#F!gfpgTCyK!2oFOjVFKyOreKv7zdY1fEQ
 (If you want to contribute to this collection feel free to send me a message through [#modding](https://www.megacrit.com/) or a github issue.)
 
 ---
+=======
+# Default Mod Base - Quick Start
+
+This is a cloneable branch of the Default with all comments removed.
+
+You can use this to quickly start up a brand new mod.
+
+I assume you know what you are doing.

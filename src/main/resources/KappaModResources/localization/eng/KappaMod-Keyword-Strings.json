@@ -1,0 +1,48 @@
+[
+  {
+    "PROPER_NAME": "Bubble",
+    "NAMES": [
+      "bubble",
+      "bubbled"
+    ],
+    "DESCRIPTION": "Place in a bubble, which pops and returns the bubbled card to hand if you take unblocked attack damage."
+  },
+  {
+    "PROPER_NAME": "Float",
+    "NAMES": [
+      "float"
+    ],
+    "DESCRIPTION": "Adds a number of cards to hand, starting from the rightmost bubble, then from the bottom of the draw pile if no bubbles remain."
+  },
+  {
+    "PROPER_NAME": "Ripple",
+    "NAMES": ["ripple"],
+    "DESCRIPTION": "Adjusts your Flood level based on the direction of the current."
+  },
+  {
+    "PROPER_NAME": "Surging",
+    "NAMES": ["surging"],
+    "DESCRIPTION": "Applies when Flood is above 0."
+  },
+  {
+    "PROPER_NAME": "Receding",
+    "NAMES": ["receding"],
+    "DESCRIPTION": "Applies when Flood is below 0."
+  },
+  {
+    "PROPER_NAME": "Submerge",
+    "NAMES": [
+      "submerge",
+      "submerged"
+    ],
+    "DESCRIPTION": "Submerged enemies gain increasing levels of #yDrown each turn, which causes them to lose HP at the end of their turn."
+  },
+  {
+    "PROPER_NAME": "Drown",
+    "NAMES": [
+      "drown",
+      "drowning"
+    ],
+    "DESCRIPTION": "Drowning enemies lose HP at the end of their turn if Submerged, otherwise they lose half their Drown."
+  }
+]

@@ -1,0 +1,228 @@
+{
+  "KappaMod:AquaJet": {
+    "NAME": "Aqua Jet",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: Deals 1 more damage."
+  },
+  "KappaMod:BubbleDragon": {
+    "NAME": "Fire! Bubble Dragon!",
+    "DESCRIPTION": "Add as many kappamod:Bubbled cards to your hand as possible. NL They cost 0 this turn. NL You can only play 1 *Fire! *Bubble *Dragon! per turn."
+  },
+  "KappaMod:ReactiveArmor": {
+    "NAME": "Reactive Armor",
+    "DESCRIPTION": "Gain !B! Block. NL The first time you are attacked this turn, deal !M! damage back."
+  },
+  "KappaMod:CleansingGeyser": {
+    "NAME": "Cleansing Geyser",
+    "DESCRIPTION": "Exhaust a card from your discard pile. NL Deal !D! damage times its cost. NL (If it would attack 0 times, attack once.)"
+  },
+  "KappaMod:DashCancel": {
+    "NAME": "Dash Cancel",
+    "DESCRIPTION": "Gain !B! Block. NL If you played an Attack this turn, gain [E]."
+  },
+  "KappaMod:DividingEdge": {
+    "NAME": "Dividing Edge",
+    "DESCRIPTION": "Deal !D! damage. NL If enemy is kappamod:Submerged, deal !D! damage again."
+  },
+  "KappaMod:DrenchingStrike": {
+    "NAME": "Drenching Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! kappamod:Drown."
+  },
+  "KappaMod:EruptingGeyser": {
+    "NAME": "Erupting Geyser",
+    "DESCRIPTION": "Deal !D! damage. NL Add a card from your discard pile to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a card from your discard pile to your hand."
+  },
+  "KappaMod:ExtendingArm": {
+    "NAME": "Extending Arm",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Float !M!. NL kappamod:Receding: kappamod:Float !M! again."
+  },
+  "KappaMod:GenbuShell": {
+    "NAME": "Genbu Shell",
+    "DESCRIPTION": "Gain !B! Block. NL kappamod:Surging: kappamod:Float !M!. NL kappamod:Receding: Card has +3 Block."
+  },
+  "KappaMod:HydroCamouflage": {
+    "NAME": "Hydro Camouflage",
+    "DESCRIPTION": "Prevent the next time you would lose HP before the end of the enemies' turn. NL Next turn, if this was not triggered, gain [E] and draw !M! cards. Exhaust."
+  },
+  "KappaMod:Hydrometry": {
+    "NAME": "Hydrometry",
+    "DESCRIPTION": "kappamod:Ripple 2. NL kappamod:Surging: Gain !M! Block for each card with kappamod:Ripple played this turn. NL kappamod:Receding: Gain !M! Block next turn for each card with kappamod:Ripple played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !B! Block.)"
+    ]
+  },
+  "KappaMod:KappaBasicDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "KappaMod:KappaBasicStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "KappaMod:KappaPororoca": {
+    "NAME": "Kappa Pororoca",
+    "DESCRIPTION": "Apply !M! kappamod:Submerge and !KappaMod:DrownVariable! kappamod:Drown."
+  },
+  "KappaMod:KikuIchimonji": {
+    "NAME": "Kiku-Ichimonji Compressor",
+    "DESCRIPTION": "{@@}Deal !D! damage twice. NL kappamod:Ripple 2. NL kappamod:Surging: Draw !M! card{!M!|>1=s}. NL kappamod:Receding: Card has +1 Damage."
+  },
+  "KappaMod:LooseCannon": {
+    "NAME": "Loose Cannon",
+    "DESCRIPTION": "Deal !D! damage to a random enemy."
+  },
+  "KappaMod:MassProduction": {
+    "NAME": "Mass Production",
+    "DESCRIPTION": "{@@} Choose a Skill or Power, except *Mass *Production. Add {!M!|@=!M!|1=a} cop{!M!|@=ies|1=y} of that card into your hand. NL Exhaust."
+  },
+  "KappaMod:NessieSortie": {
+    "NAME": "Nessie Sortie",
+    "DESCRIPTION": "Whenever you play an Attack, deal !M! damage to a random enemy."
+  },
+  "KappaMod:OozeFlooding": {
+    "NAME": "Ooze Flooding",
+    "DESCRIPTION": "Each time you deal unblocked damage, apply !M! kappamod:Submerge and !M! kappamod:Drown."
+  },
+  "KappaMod:OpticalCamouflage": {
+    "NAME": "Optical Camouflage",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Next turn, if you didn't take unblocked attack damage, draw !M! card{!M!|>1=s} at the start of your next turn."
+  },
+  "KappaMod:Overcharge": {
+    "NAME": "Overcharge",
+    "DESCRIPTION": "Draw !M! cards. Add 2 *Dazed to your discard pile."
+  },
+  "KappaMod:Overflow": {
+    "NAME": "Overflow",
+    "DESCRIPTION": "This turn, all kappamod:Surging and kappamod:Receding effects trigger regardless of your *Flood.",
+    "UPGRADE_DESCRIPTION": "For !M! turns, all kappamod:Surging and kappamod:Receding effects trigger regardless of your *Flood."
+  },
+  "KappaMod:PhotonTorpedo": {
+    "NAME": "Photon Torpedo",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Apply 1 Weak and 1 Vulnerable to enemies for each time they were attacked."
+  },
+  "KappaMod:SanpeiFighter": {
+    "NAME": "Sanpei Fighter",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL kappamod:Float !M!. NL Next turn, draw {!M!|1=a|@=!M!} card{!M!|1=|@=s}."
+  },
+  "KappaMod:ShikirodamaExtraction": {
+    "NAME": "Shikirodama Extraction",
+    "DESCRIPTION": "Enemy loses !M! Strength. NL Gain !M! Strength. NL Exhaust."
+  },
+  "KappaMod:SignboardSmash": {
+    "NAME": "Signboard Smash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL kappamod:Surging: Deals 3 more damage. NL kappamod:Receding: Gains 3 more Block."
+  },
+  "KappaMod:SpringPunch": {
+    "NAME": "Spring Punch",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Surging: Apply !M! Weak. NL kappamod:Receding: Apply !M! Vulnerable."
+  },
+  "KappaMod:SteamBlaster": {
+    "NAME": "Steam Blaster",
+    "DESCRIPTION": "Deal !D! damage. NL If enemy has Weak or Vulnerable, deal !D! damage for each."
+  },
+  "KappaMod:SuperScope3D": {
+    "NAME": "Super Scope 3D",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+  },
+  "KappaMod:SuppressingFire": {
+    "NAME": "Suppressing Fire",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL kappamod:Ripple 2. NL kappamod:Surging: +1 damage. NL kappamod:Receding: Apply !M! Weak to ALL enemies."
+  },
+  "KappaMod:ToolBag": {
+    "NAME": "Tool Bag",
+    "DESCRIPTION": "Put a Skill from your draw pile into your hand. NL Discard 1 card.",
+    "UPGRADE_DESCRIPTION": "Put a Skill from your draw pile into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "There are no Skills NL in my draw pile."
+    ]
+  },
+  "KappaMod:WaterCarpet": {
+    "NAME": "Water Carpet",
+    "DESCRIPTION": "kappamod:Bubble the top !M! cards of your draw pile, then, gain !B! Block for each of your kappamod:Bubbled cards."
+  },
+  "KappaMod:WaterDriller": {
+    "NAME": "Water Driller",
+    "DESCRIPTION": "Deal !D! damage. NL If enemy has Block, deal !D! damage again."
+  },
+  "KappaMod:WaterSwing": {
+    "NAME": "Water Bomb Giant Swing",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: +!M! damage. NL kappamod:Receding: Deal !D! damage to ALL enemies."
+  },
+  "KappaMod:BubbleBarrier": {
+    "NAME": "Bubble Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL If this card is kappamod:Bubbled, increase Block by !M! this combat."
+  },
+  "KappaMod:Bubblebeam": {
+    "NAME": "Bubblebeam",
+    "DESCRIPTION": "Deal !D! damage for each of your kappamod:Bubbled cards."
+  },
+  "KappaMod:CascadingTorrent": {
+    "NAME": "Cascading Torrent",
+    "DESCRIPTION": "Each time you play a card that can kappamod:Ripple, gain 1 temporary Strength and Dexterity."
+  },
+  "KappaMod:CephalicPlate": {
+    "NAME": "Spin the Cephalic Plate",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is kappamod:Bubbled, increase damage by !M! this combat."
+  },
+  "KappaMod:DiluvialMere": {
+    "NAME": "Diluvial Mere",
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage for each time you kappamod:Ripple this turn."
+  },
+  "KappaMod:KegonGun": {
+    "NAME": "Kegon Gun",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Bubble a copy of this card."
+  },
+  "KappaMod:RapidsRush": {
+    "NAME": "Rapids Rush",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is kappamod:Bubbled, reduce cost by !M! this combat."
+  },
+  "KappaMod:RepulsorShields": {
+    "NAME": "Repulsor Shields",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Weak back."
+  },
+  "KappaMod:Whirlpool": {
+    "NAME": "Whirlpool",
+    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Submerge to ALL enemies X times."
+  },
+  "KappaMod:CoreCharge": {
+    "NAME": "Core Charge",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
+  },
+  "KappaMod:AerialBlaster": {
+    "NAME": "Aerial Blaster",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy this turn, it takes !M! damage."
+  },
+  "KappaMod:Ambush": {
+    "NAME": "Ambush",
+    "DESCRIPTION": "Deal !D! damage. NL If enemy does NOT intend to attack, apply !M! Vulnerable."
+  },
+  "KappaMod:BottleRockets": {
+    "NAME": "Bottle Rockets",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL kappamod:Bubble {!M!|1=a|@=!M!} card{!M!|1=|@=s} from your discard pile."
+  },
+  "KappaMod:BubbleBounce": {
+    "NAME": "Bubble Bounce",
+    "DESCRIPTION": "Gain !B! Block. NL kappamod:Bubble this card."
+  },
+  "KappaMod:QCumberSpeakers": {
+    "NAME": "QCumber Speakers",
+    "DESCRIPTION": "ALL enemies gain 2 Weak and lose !M! Strength this turn. NL Exhaust."
+  },
+  "KappaMod:AirDash": {
+    "NAME": "Air Dash",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Dexterity."
+  },
+  "KappaMod:GreatRiverWar": {
+    "NAME": "Great River War",
+    "DESCRIPTION": "{@@}Apply !M! kappamod:Submerge. NL {!Upgrades!|0=Double|@=Triple} enemy's kappamod:Drown. NL Exhaust."
+  },
+  "KappaMod:MountainRopeway": {
+    "NAME": "Mountain Ropeway",
+    "DESCRIPTION": "At the start of your turn, kappamod:Float !M!."
+  },
+  "KappaMod:Washout": {
+    "NAME": "Washout",
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: Deal extra damage equal to your *Flood."
+  }
+}
