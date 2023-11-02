@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class MountainRopeway extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(MountainRopeway.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Power.png");
+    public static final String IMG = KappaMod.makeCardPath("MountainRopeway.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

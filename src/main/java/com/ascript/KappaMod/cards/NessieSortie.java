@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class NessieSortie extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(NessieSortie.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Power.png");
+    public static final String IMG = KappaMod.makeCardPath("NessieSortie.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

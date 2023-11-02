@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 public class Ambush extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(Ambush.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Attack.png");
+    public static final String IMG = KappaMod.makeCardPath("Ambush.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
