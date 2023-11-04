@@ -6,7 +6,7 @@
     <groupId>kappamod</groupId>
     <artifactId>KappaMod</artifactId>
     <name>The Kappa</name>
-    <version>0.0.0-prealpha</version>
+    <version>0.0.1-prealpha</version>
     <description>Kappa-pa kappa-pa Niiiitooriiiiii</description>
 
     <properties>

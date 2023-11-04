@@ -5,14 +5,14 @@
       "bubble",
       "bubbled"
     ],
-    "DESCRIPTION": "Place in a bubble, which pops and returns the bubbled card to hand if you take unblocked attack damage."
+    "DESCRIPTION": "Placed in a bubble. Whenever you receive unblocked attack damage, a bubble pops and its card is put into your hand."
   },
   {
     "PROPER_NAME": "Float",
     "NAMES": [
       "float"
     ],
-    "DESCRIPTION": "Adds a number of cards to hand, starting from the rightmost bubble, then from the bottom of the draw pile if no bubbles remain."
+    "DESCRIPTION": "Pop bubbles and put their cards into your hand. If no bubbles remain, draw from the bottom of the draw pile."
   },
   {
     "PROPER_NAME": "Ripple",
@@ -35,7 +35,7 @@
       "submerge",
       "submerged"
     ],
-    "DESCRIPTION": "Submerged enemies gain increasing levels of #yDrown each turn, which causes them to lose HP at the end of their turn."
+    "DESCRIPTION": "Deal 15% less damage with attacks. Take 25% more damage from attacks."
   },
   {
     "PROPER_NAME": "Drown",
@@ -43,6 +43,6 @@
       "drown",
       "drowning"
     ],
-    "DESCRIPTION": "Drowning enemies lose HP at the end of their turn if Submerged, otherwise they lose half their Drown."
+    "DESCRIPTION": "Drowning creatures take damage at the end of their turn, then damage from Drown increases by 50% (rounded down). Lasts 3 turns unless reapplied."
   }
 ]

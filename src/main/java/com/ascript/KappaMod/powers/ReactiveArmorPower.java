@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static com.ascript.KappaMod.KappaMod.makePowerPath;
 
-public class BubbleBarrierPower extends AbstractPower {
-    public static final String POWER_ID = KappaMod.makeID("BubbleBarrierPower");
+public class ReactiveArmorPower extends AbstractPower {
+    public static final String POWER_ID = KappaMod.makeID("ReactiveArmorPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,7 +25,7 @@ public class BubbleBarrierPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("bubble84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("bubble32.png"));
 
-    public BubbleBarrierPower(final AbstractCreature owner, final int amt) {
+    public ReactiveArmorPower(final AbstractCreature owner, final int amt) {
         name = NAME;
         ID = POWER_ID;
 
@@ -34,8 +34,9 @@ public class BubbleBarrierPower extends AbstractPower {
 
         type = PowerType.BUFF;
 
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        //this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        //this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        loadRegion("explosive");
 
         updateDescription();
     }

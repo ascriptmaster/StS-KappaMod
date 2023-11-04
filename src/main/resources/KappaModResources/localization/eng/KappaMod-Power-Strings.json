@@ -98,7 +98,7 @@
       " you play applies its kappamod:Surging and kappamod:Receding effects regardless of your #yFlood."
     ]
   },
-  "KappaMod:BubbleBarrierPower": {
+  "KappaMod:ReactiveArmorPower": {
     "NAME": "Bubble Barrier",
     "DESCRIPTIONS": [
       "The first time you are attacked, deal #b",
@@ -108,11 +108,11 @@
   "KappaMod:SubmergePower": {
     "NAME": "Submerged",
     "DESCRIPTIONS": [
-      "At the start of each round for the next #b",
-      " turn, ",
-      " turns, ",
-      "this creature gains #b",
-      " #yDrown."
+      "#yAttacks deal #b",
+      "% less damage and receive #b",
+      "% more damage from #yAttacks for #b",
+      " turn.",
+      " turns."
     ]
   },
   "KappaMod:DrownPower": {

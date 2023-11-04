@@ -7,8 +7,10 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -21,8 +23,6 @@ public class SubmergePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("overheat_84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("overheat_32.png"));
-
-    private static final int DMG_START = 2;
 
     private AbstractCreature source;
 
@@ -45,33 +45,33 @@ public class SubmergePower extends AbstractPower {
         updateDescription();
     }
 
-    public int getDrownIncrease() {
-        if (owner != null && owner.hasPower(DrownPower.POWER_ID)) {
-            int drownAmt = owner.getPower(DrownPower.POWER_ID).amount;
-            return Math.max(drownAmt/2, 1);
-        }
-        return DMG_START;
-    }
-
     @Override
     public void atEndOfRound() {
         if (amount > 1) {
-            int drownInc = getDrownIncrease();
-            addToBot(new ApplyPowerAction(owner, source, new DrownPower(owner, source, drownInc), drownInc));
             addToBot(new ReducePowerAction(owner, source, this, 1));
         } else {
             addToBot(new RemoveSpecificPowerAction(owner, source, this));
         }
     }
 
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return damage * 0.85f;
+        } else {
+            return damage;
+        }
+    }
+
+    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+        if (type == DamageInfo.DamageType.NORMAL) {
+            return damage * 1.25f;
+        } else {
+            return damage;
+        }
+    }
+
     @Override
     public void updateDescription() {
-        int drownInc = getDrownIncrease();
-        this.description = DESCRIPTIONS[0] + amount;
-        if (amount == 1) {
-            this.description += DESCRIPTIONS[1] + DESCRIPTIONS[3] + drownInc + DESCRIPTIONS[4];
-        } else {
-            this.description += DESCRIPTIONS[2] + DESCRIPTIONS[3] + drownInc + DESCRIPTIONS[4];
-        }
+        this.description = DESCRIPTIONS[0] + 15 + DESCRIPTIONS[1] + 25 + DESCRIPTIONS[2] + amount + DESCRIPTIONS[amount == 1 ? 3 : 4];
     }
 }

@@ -2,7 +2,7 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.SubmergePower;
+import com.ascript.KappaMod.powers.DrownPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -32,7 +32,7 @@ public class DividingEdge extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        if (m.hasPower(SubmergePower.POWER_ID)) {
+        if (m.hasPower(DrownPower.POWER_ID)) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }

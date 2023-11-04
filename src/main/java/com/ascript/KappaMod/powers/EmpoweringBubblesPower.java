@@ -50,6 +50,7 @@ public class EmpoweringBubblesPower extends AbstractPower implements BubbleListe
 
     @Override
     public void onBubble(AbstractCard c) {
+        flashWithoutSound();
         CardModifierManager.addModifier(c, new EmpoweringBubblesModifier(amount));
     }
 

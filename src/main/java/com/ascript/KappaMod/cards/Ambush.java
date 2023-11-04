@@ -3,6 +3,7 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.AerialBlasterPower;
+import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -38,7 +39,7 @@ public class Ambush extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (m != null && m.getIntentBaseDmg() < 0) {
-            addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
+            addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, magicNumber), magicNumber));
         }
     }
     

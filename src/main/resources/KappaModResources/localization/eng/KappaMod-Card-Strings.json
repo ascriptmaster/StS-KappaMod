@@ -21,7 +21,7 @@
   },
   "KappaMod:DividingEdge": {
     "NAME": "Dividing Edge",
-    "DESCRIPTION": "Deal !D! damage. NL If enemy is kappamod:Submerged, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If enemy is kappamod:Drowning, deal !D! damage again."
   },
   "KappaMod:DrenchingStrike": {
     "NAME": "Drenching Strike",
@@ -98,7 +98,7 @@
   },
   "KappaMod:PhotonTorpedo": {
     "NAME": "Photon Torpedo",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Apply 1 Weak and 1 Vulnerable to enemies for each time they were attacked."
+    "DESCRIPTION": "Deal !D! damage and apply 1 kappamod:Submerge to a random enemy !M! times. NL (Applies kappamod:Submerge after all damage has been dealt.)"
   },
   "KappaMod:SanpeiFighter": {
     "NAME": "Sanpei Fighter",
@@ -118,16 +118,15 @@
   },
   "KappaMod:SteamBlaster": {
     "NAME": "Steam Blaster",
-    "DESCRIPTION": "Deal !D! damage. NL If enemy has Weak or Vulnerable, deal !D! damage for each."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If enemy has kappamod:Submerge, gain [E] and draw !M! card{!M!|>1=s}."
   },
   "KappaMod:SuperScope3D": {
     "NAME": "Super Scope 3D",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies{!M!|1=|2= twice|@=!M! times}."
   },
   "KappaMod:SuppressingFire": {
     "NAME": "Suppressing Fire",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL kappamod:Ripple 2. NL kappamod:Surging: +1 damage. NL kappamod:Receding: Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Submerge to ALL enemies. NL kappamod:Ripple 2. NL kappamod:Surging: +1 damage. NL kappamod:Receding: Apply !M! kappamod:Submerge to ALL enemies."
   },
   "KappaMod:ToolBag": {
     "NAME": "Tool Bag",
@@ -163,7 +162,7 @@
   },
   "KappaMod:CephalicPlate": {
     "NAME": "Spin the Cephalic Plate",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is kappamod:Bubbled, increase damage by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Bubble. NL When kappamod:Bubbled, increase its damage by !M! this combat."
   },
   "KappaMod:DiluvialMere": {
     "NAME": "Diluvial Mere",
@@ -195,7 +194,7 @@
   },
   "KappaMod:Ambush": {
     "NAME": "Ambush",
-    "DESCRIPTION": "Deal !D! damage. NL If enemy does NOT intend to attack, apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL If enemy does NOT intend to attack, apply !M! kappamod:Submerge."
   },
   "KappaMod:BottleRockets": {
     "NAME": "Bottle Rockets",
@@ -215,7 +214,7 @@
   },
   "KappaMod:GreatRiverWar": {
     "NAME": "Great River War",
-    "DESCRIPTION": "{@@}Apply !M! kappamod:Submerge. NL {!Upgrades!|0=Double|@=Triple} enemy's kappamod:Drown. NL Exhaust."
+    "DESCRIPTION": "{@@}{!Upgrades!|0=Double|@=Triple} enemy's kappamod:Drown. NL Exhaust."
   },
   "KappaMod:MountainRopeway": {
     "NAME": "Mountain Ropeway",

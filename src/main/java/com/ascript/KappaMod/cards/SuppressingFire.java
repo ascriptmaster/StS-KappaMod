@@ -5,6 +5,7 @@ import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
 import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -43,14 +44,14 @@ public class SuppressingFire extends AbstractDynamicCard {
         addToBot(new RippleAction(p, RIPPLE));
         addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         List<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
-        monsters.stream().forEach(this::addWeakToBot);
+        monsters.stream().forEach(this::addSubmergeToBot);
         if (FloodPower.receding(p)) {
-            monsters.stream().forEach(this::addWeakToBot);
+            monsters.stream().forEach(this::addSubmergeToBot);
         }
     }
 
-    private void addWeakToBot(AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, magicNumber, false), magicNumber, true));
+    private void addSubmergeToBot(AbstractMonster m) {
+        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new SubmergePower(m, AbstractDungeon.player, magicNumber), magicNumber, true));
     }
 
     @Override

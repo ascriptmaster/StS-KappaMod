@@ -2,7 +2,7 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.BubbleBarrierPower;
+import com.ascript.KappaMod.powers.ReactiveArmorPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +34,7 @@ public class ReactiveArmor extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new ApplyPowerAction(p, p, new BubbleBarrierPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new ReactiveArmorPower(p, magicNumber), magicNumber));
     }
 
     @Override

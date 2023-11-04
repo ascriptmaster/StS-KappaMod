@@ -3,6 +3,7 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.cards.interfaces.BubbleListeningCardInterface;
 import com.ascript.KappaMod.characters.TheKappa;
+import com.ascript.KappaMod.patches.KappaCardFields;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -21,15 +22,16 @@ public class CephalicPlate extends AbstractDynamicCard implements BubbleListenin
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 3;
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 4;
 
     public CephalicPlate() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MAGIC;
+        KappaCardFields.bubbleOnUse.set(this, true);
     }
     
     @Override

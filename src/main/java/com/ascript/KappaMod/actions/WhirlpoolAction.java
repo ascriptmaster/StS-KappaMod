@@ -5,10 +5,8 @@ package com.ascript.KappaMod.actions;
 // (powered by Fernflower decompiler)
 //
 
-import com.ascript.KappaMod.powers.SubmergePower;
+import com.ascript.KappaMod.powers.DrownPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -63,7 +61,7 @@ public class WhirlpoolAction extends AbstractGameAction {
                 addToBot(new VFXAction(this.p, new CleaveEffect(), 0.0F));
                 addToBot(new DamageAllEnemiesAction(this.p, this.multiDamage, this.damageType, AttackEffect.NONE, true));
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, amount)));
+                    addToBot(new ApplyPowerAction(m, p, new DrownPower(m, p, amount), amount));
                 }
             }
 
