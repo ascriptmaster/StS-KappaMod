@@ -22,19 +22,15 @@ public class KappaPororoca extends AbstractDynamicCard {
 
     private static final int MAGIC = 6;
     private static final int UPGRADE_PLUS_MAGIC = 2;
-    private static final int DROWN = 2;
-    private static final int UPGRADE_PLUS_DROWN = 2;
 
     public KappaPororoca() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
-        baseDrownNumber = drownNumber = DROWN;
     }
     
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(m, p, new DrownPower(m, p, drownNumber), drownNumber));
+        addToBot(new ApplyPowerAction(m, p, new DrownPower(m, p, magicNumber), magicNumber));
     }
     
     @Override
@@ -42,7 +38,6 @@ public class KappaPororoca extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_MAGIC);
-            updateDrownNumber(UPGRADE_PLUS_DROWN);
             initializeDescription();
         }
     }

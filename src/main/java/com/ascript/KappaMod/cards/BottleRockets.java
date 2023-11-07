@@ -1,6 +1,7 @@
 package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.actions.BubbleFromDiscardAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -32,6 +33,7 @@ public class BottleRockets extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new BubbleFromDiscardAction(magicNumber));
     }
     
     @Override

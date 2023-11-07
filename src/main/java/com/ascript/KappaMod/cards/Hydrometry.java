@@ -40,9 +40,7 @@ public class Hydrometry extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyPowers();
         addToBot(new RippleAction(p, 2));
-        if (FloodPower.surging(p)) {
-            addToBot(new GainBlockAction(p, block));
-        }
+        addToBot(new GainBlockAction(p, block));
         if (FloodPower.receding(p)) {
             addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, block), block));
         }

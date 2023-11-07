@@ -35,6 +35,7 @@ public class WaterSwing extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        isMultiDamage = true;
         tags.add(KappaTags.RIPPLE);
     }
     
@@ -43,7 +44,7 @@ public class WaterSwing extends AbstractDynamicCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new RippleAction(p, 1));
         if (FloodPower.receding(p)) {
-            addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, KappaAttackEffect.SPLASH));
+            addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, KappaAttackEffect.SPLASH));
         }
     }
 

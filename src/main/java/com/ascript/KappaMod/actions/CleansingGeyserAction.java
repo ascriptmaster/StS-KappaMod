@@ -31,7 +31,6 @@ public class CleansingGeyserAction extends AbstractGameAction {
     }
 
     public void attack(int amt) {
-        if (amt < 1) amt = 1;
         for (int i = 0; i < amt; i++) {
             addToTop(new DamageAction(target, new DamageInfo(source, card.damage, card.damageTypeForTurn), KappaAttackEffect.SPLASH));
         }

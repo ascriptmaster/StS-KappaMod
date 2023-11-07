@@ -13,7 +13,7 @@
   },
   "KappaMod:CleansingGeyser": {
     "NAME": "Cleansing Geyser",
-    "DESCRIPTION": "Exhaust a card from your discard pile. NL Deal !D! damage times its cost. NL (If it would attack 0 times, attack once.)"
+    "DESCRIPTION": "Exhaust a card from your discard pile. NL Deal !D! damage times its cost."
   },
   "KappaMod:DashCancel": {
     "NAME": "Dash Cancel",
@@ -46,7 +46,7 @@
   },
   "KappaMod:Hydrometry": {
     "NAME": "Hydrometry",
-    "DESCRIPTION": "kappamod:Ripple 2. NL kappamod:Surging: Gain !M! Block for each card with kappamod:Ripple played this turn. NL kappamod:Receding: Gain !M! Block next turn for each card with kappamod:Ripple played this turn.",
+    "DESCRIPTION": "kappamod:Ripple 2. NL Gain !M! Block for each card with kappamod:Ripple played this turn. NL kappamod:Receding: Gain the same amount of Block next turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
@@ -61,11 +61,11 @@
   },
   "KappaMod:KappaPororoca": {
     "NAME": "Kappa Pororoca",
-    "DESCRIPTION": "Apply !M! kappamod:Submerge and !KappaMod:DrownVariable! kappamod:Drown."
+    "DESCRIPTION": "Apply !M! kappamod:Drown."
   },
   "KappaMod:KikuIchimonji": {
     "NAME": "Kiku-Ichimonji Compressor",
-    "DESCRIPTION": "{@@}Deal !D! damage twice. NL kappamod:Ripple 2. NL kappamod:Surging: Draw !M! card{!M!|>1=s}. NL kappamod:Receding: Card has +1 Damage."
+    "DESCRIPTION": "Deal !D! damage twice. NL kappamod:Ripple 2. NL kappamod:Surging: kappamod:Float !M!."
   },
   "KappaMod:LooseCannon": {
     "NAME": "Loose Cannon",
@@ -126,7 +126,7 @@
   },
   "KappaMod:SuppressingFire": {
     "NAME": "Suppressing Fire",
-    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Submerge to ALL enemies. NL kappamod:Ripple 2. NL kappamod:Surging: +1 damage. NL kappamod:Receding: Apply !M! kappamod:Submerge to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Submerge to ALL enemies. NL kappamod:Ripple 2. NL kappamod:Receding: Apply !M! kappamod:Submerge to ALL enemies."
   },
   "KappaMod:ToolBag": {
     "NAME": "Tool Bag",
@@ -158,7 +158,7 @@
   },
   "KappaMod:CascadingTorrent": {
     "NAME": "Cascading Torrent",
-    "DESCRIPTION": "Each time you play a card that can kappamod:Ripple, gain 1 temporary Strength and Dexterity."
+    "DESCRIPTION": "Each time you kappamod:Ripple from a card, gain 1 Strength and 1 Dexterity this turn."
   },
   "KappaMod:CephalicPlate": {
     "NAME": "Spin the Cephalic Plate",
@@ -170,7 +170,7 @@
   },
   "KappaMod:KegonGun": {
     "NAME": "Kegon Gun",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Bubble a copy of this card."
+    "DESCRIPTION": "{@@}Deal !D! damage for each other Attack in your hand and kappamod:Bubbles.{!M!|1= NL (You have !M! other Attack.)|>0= NL (You have !M! other Attacks.)}"
   },
   "KappaMod:RapidsRush": {
     "NAME": "Rapids Rush",

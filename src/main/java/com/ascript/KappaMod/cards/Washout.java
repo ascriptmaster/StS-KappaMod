@@ -35,6 +35,7 @@ public class Washout extends AbstractDynamicCard {
     public Washout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
         tags.add(KappaTags.RIPPLE);
     }
     
