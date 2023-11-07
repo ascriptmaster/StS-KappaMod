@@ -9,6 +9,7 @@ import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.enums.KappaTags;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -50,6 +51,11 @@ public class KikuIchimonji extends AbstractDynamicCard {
             addToBot(new FloatAction(magicNumber));
         }
         addToBot(new RippleAction(p, 2));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = FloodPower.surging(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override

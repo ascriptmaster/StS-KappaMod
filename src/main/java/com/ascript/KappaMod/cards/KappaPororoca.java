@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class KappaPororoca extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(KappaPororoca.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Attack.png");
+    public static final String IMG = KappaMod.makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

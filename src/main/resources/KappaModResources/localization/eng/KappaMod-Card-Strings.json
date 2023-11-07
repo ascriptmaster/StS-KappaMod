@@ -5,7 +5,7 @@
   },
   "KappaMod:BubbleDragon": {
     "NAME": "Fire! Bubble Dragon!",
-    "DESCRIPTION": "Add as many kappamod:Bubbled cards to your hand as possible. NL They cost 0 this turn. NL You can only play 1 *Fire! *Bubble *Dragon! per turn."
+    "DESCRIPTION": "Add as many kappamod:Bubbled cards to your hand as possible. NL They cost 0 this turn."
   },
   "KappaMod:ReactiveArmor": {
     "NAME": "Reactive Armor",
@@ -63,6 +63,10 @@
     "NAME": "Kappa Pororoca",
     "DESCRIPTION": "Apply !M! kappamod:Drown."
   },
+  "KappaMod:KappaFlashFlood": {
+    "NAME": "Kappa Flash Flood",
+    "DESCRIPTION": "Apply !M! kappamod:Drown and 2 kappamod:Submerge to ALL enemies. NL Exhaust."
+  },
   "KappaMod:KikuIchimonji": {
     "NAME": "Kiku-Ichimonji Compressor",
     "DESCRIPTION": "Deal !D! damage twice. NL kappamod:Ripple 2. NL kappamod:Surging: kappamod:Float !M!."
@@ -81,7 +85,7 @@
   },
   "KappaMod:OozeFlooding": {
     "NAME": "Ooze Flooding",
-    "DESCRIPTION": "Each time you deal unblocked damage, apply !M! kappamod:Submerge and !M! kappamod:Drown."
+    "DESCRIPTION": "{@@}Apply X{!Upgrades!|>1=+1} Weak. NL Apply X{!Upgrades!|>1=+1} Submerge. NL Exhaust."
   },
   "KappaMod:OpticalCamouflage": {
     "NAME": "Optical Camouflage",
@@ -114,7 +118,7 @@
   },
   "KappaMod:SpringPunch": {
     "NAME": "Spring Punch",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Surging: Apply !M! Weak. NL kappamod:Receding: Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. Apply !M! kappamod:Submerge. NL kappamod:Receding: Apply !M! Vulnerable."
   },
   "KappaMod:SteamBlaster": {
     "NAME": "Steam Blaster",
@@ -206,11 +210,11 @@
   },
   "KappaMod:QCumberSpeakers": {
     "NAME": "QCumber Speakers",
-    "DESCRIPTION": "ALL enemies gain 2 Weak and lose !M! Strength this turn. NL Exhaust."
+    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Apply 2 kappamod:Submerge to ALL enemies. NL Exhaust."
   },
   "KappaMod:AirDash": {
     "NAME": "Air Dash",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Dexterity."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity this turn."
   },
   "KappaMod:GreatRiverWar": {
     "NAME": "Great River War",

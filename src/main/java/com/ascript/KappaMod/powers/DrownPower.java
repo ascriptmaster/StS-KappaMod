@@ -44,6 +44,10 @@ public class DrownPower extends TwoAmountPower {
         amount = TURNS;
         priority = -1;
 
+        if (amount2 > 9999) {
+            amount2 = 9999;
+        }
+
         type = PowerType.DEBUFF;
         isTurnBased = true;
 
@@ -57,11 +61,18 @@ public class DrownPower extends TwoAmountPower {
     @Override
     public void stackPower(int stackAmount) {
         amount2 += stackAmount;
+        if (amount2 > 9999) {
+            amount2 = 9999;
+        }
         amount = TURNS;
     }
 
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("POWER_POISON", 0.05F);
+    }
+
     @Override
-    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+    public void atEndOfTurn(boolean isPlayer) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
             addToBot(new DamageAction(owner, new DamageInfo(owner, amount2, DamageInfo.DamageType.THORNS), KappaAttackEffect.SPLASH));
@@ -69,6 +80,9 @@ public class DrownPower extends TwoAmountPower {
                 addToBot(new RemoveSpecificPowerAction(owner, source, this));
             } else {
                 amount2 += (int) Math.ceil(amount2 / 2.0);
+                if (amount2 > 9999) {
+                    amount2 = 9999;
+                }
                 addToBot(new ReducePowerAction(owner, source, this, 1));
             }
         }

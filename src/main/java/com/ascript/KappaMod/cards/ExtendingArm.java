@@ -9,8 +9,10 @@ import com.ascript.KappaMod.enums.KappaTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ExtendingArm extends AbstractDynamicCard {
@@ -44,6 +46,11 @@ public class ExtendingArm extends AbstractDynamicCard {
         if (FloodPower.receding(p)) {
             addToBot(new FloatAction(magicNumber));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = FloodPower.receding(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
     
     @Override

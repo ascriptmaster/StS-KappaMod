@@ -28,14 +28,6 @@ public class BubbleDragon extends AbstractDynamicCard {
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!super.canUse(p, m)) {
-            return false;
-        }
-        return AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().noneMatch(c -> c.cardID == cardID);
-    }
-
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BubbleDragonAction(p));
     }

@@ -2,6 +2,7 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
+import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -42,7 +43,7 @@ public class QCumberSpeakers extends AbstractDynamicCard {
             if (!m.hasPower(ArtifactPower.POWER_ID)) {
                 addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber, true));
             }
-            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, 2, false), 2, true));
+            addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, 2), 2, true));
         }
     }
     

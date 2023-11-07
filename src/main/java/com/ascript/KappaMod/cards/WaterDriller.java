@@ -3,11 +3,14 @@ package com.ascript.KappaMod.cards;
 import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
+import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -42,6 +45,15 @@ public class WaterDriller extends CustomCard {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = this.shouldRefund() ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+    }
+
+    private boolean shouldRefund() {
+        return AbstractDungeon.getMonsters().monsters.stream().anyMatch(m -> m.currentBlock > 0);
     }
 
     @Override

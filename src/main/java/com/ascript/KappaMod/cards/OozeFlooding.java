@@ -7,7 +7,6 @@ import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-@AutoAdd.Ignore
 public class OozeFlooding extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(OozeFlooding.class.getSimpleName());
