@@ -12,8 +12,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.Iterator;
 
 public class BubbleFromDiscardAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleFromDiscardAction");
-    public static final String[] TEXT = uiStrings.TEXT;;
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleSelectionAction");
+    public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
 
     public BubbleFromDiscardAction(int amt) {

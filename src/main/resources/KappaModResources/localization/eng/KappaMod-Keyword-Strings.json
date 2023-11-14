@@ -3,7 +3,8 @@
     "PROPER_NAME": "Bubble",
     "NAMES": [
       "bubble",
-      "bubbled"
+      "bubbled",
+      "bubbles"
     ],
     "DESCRIPTION": "Placed in a bubble. Whenever you receive unblocked attack damage, a bubble pops and its card is put into your hand."
   },

@@ -1,5 +1,8 @@
 {
   "KappaMod:CleansingGeyserAction": {
     "TEXT": ["Exhaust"]
+  },
+  "KappaMod:BubbleSelectionAction": {
+    "TEXT": ["Bubble"]
   }
 }

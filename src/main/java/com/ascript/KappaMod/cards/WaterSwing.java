@@ -53,28 +53,6 @@ public class WaterSwing extends AbstractDynamicCard {
     public void triggerOnGlowCheck() {
         glowColor = FloodPower.receding(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
-
-    @Override
-    public void applyPowers() {
-        int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
-            baseDamage += magicNumber;
-        }
-        super.applyPowers();
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
-            baseDamage += magicNumber;
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
     
     @Override
     public void upgrade() {

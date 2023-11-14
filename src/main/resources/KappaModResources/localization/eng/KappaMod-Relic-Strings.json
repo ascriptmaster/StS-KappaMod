@@ -36,14 +36,14 @@
     "FLAVOR": "Hopefully not *that* kind of waterboarding.",
     "DESCRIPTIONS": [
       "At the start of combat, apply #b",
-      " #ykappamod:Submerge."
+      " #ykappamod:Drown."
     ]
   },
   "KappaMod:KappaKap": {
     "NAME": "Kappa Kap",
     "FLAVOR": "Don't leave home without it!",
     "DESCRIPTIONS": [
-      "At the end of your turn, #ykappamod:Ripple 1. NL If #yFlood > 0, deal #b3 damage to a random enemy. NL Otherwise, gain #3 Block."
+      "At the end of your turn, #ykappamod:Ripple 1. If #yFlood > 0, deal #b3 damage to a random enemy. Otherwise, gain #b3 Block."
     ]
   }
 }

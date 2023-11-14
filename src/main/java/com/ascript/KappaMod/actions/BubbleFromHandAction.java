@@ -11,13 +11,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.Iterator;
+import java.util.function.Function;
 
 public class BubbleFromHandAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleFromHandAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleSelectionAction");
     public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
     private boolean isRandom;
-    public static int numDiscarded;
+    private Function<AbstractCard, AbstractGameAction> followUpAction;
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
 
     public BubbleFromHandAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom) {
@@ -26,6 +27,15 @@ public class BubbleFromHandAction extends AbstractGameAction {
         this.setValues(target, source, amount);
         this.actionType = ActionType.DISCARD;
         this.duration = DURATION;
+    }
+
+    public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random, Function<AbstractCard, AbstractGameAction> followUp) {
+        p = player;
+        isRandom = random;
+        followUpAction = followUp;
+        setValues(player, player, amount);
+        actionType = ActionType.DISCARD;
+        duration = DURATION;
     }
 
     public void update() {
@@ -41,12 +51,11 @@ public class BubbleFromHandAction extends AbstractGameAction {
 
                 for(int i = 0; i < handSize; ++i) {
                     AbstractCard c = p.hand.getTopCard();
-                    p.hand.removeCard(c);
-                    addToTop(new BubbleAction(c));
+                    processCard(c);
                 }
 
                 AbstractDungeon.player.hand.applyPowers();
-                this.tickDuration();
+                isDone = true;
                 return;
             }
 
@@ -54,36 +63,39 @@ public class BubbleFromHandAction extends AbstractGameAction {
                 if (this.amount < 0) {
                     AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);
                     AbstractDungeon.player.hand.applyPowers();
-                    this.tickDuration();
+                    tickDuration();
                     return;
                 }
 
-                numDiscarded = this.amount;
                 if (this.p.hand.size() > this.amount) {
                     AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false);
                 }
 
                 AbstractDungeon.player.hand.applyPowers();
-                this.tickDuration();
-                return;
+                tickDuration();
+            } else {
+                for (int i = 0; i < this.amount; ++i) {
+                    AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                    processCard(c);
+                }
+                isDone = true;
             }
-
-            for(int i = 0; i < this.amount; ++i) {
-                AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
-                this.p.hand.removeCard(c);
-                addToTop(new BubbleAction(c));
-            }
+            return;
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                p.hand.removeCard(c);
-                addToTop(new BubbleAction(c));
-            }
-
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.stream().forEach(this::processCard);
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }
 
-        this.tickDuration();
+        tickDuration();
+    }
+
+    private void processCard(AbstractCard c) {
+        p.hand.removeCard(c);
+        if (followUpAction != null) {
+            addToTop(followUpAction.apply(c));
+        }
+        addToTop(new BubbleAction(c));
     }
 }

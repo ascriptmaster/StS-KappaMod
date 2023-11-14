@@ -150,7 +150,7 @@
   },
   "KappaMod:WaterSwing": {
     "NAME": "Water Bomb Giant Swing",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: +!M! damage. NL kappamod:Receding: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Receding: Deal !D! damage to ALL enemies."
   },
   "KappaMod:BubbleBarrier": {
     "NAME": "Bubble Barrier",

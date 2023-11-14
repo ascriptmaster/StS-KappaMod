@@ -2,6 +2,7 @@ package com.ascript.KappaMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.powers.DrownPower;
 import com.ascript.KappaMod.powers.SubmergePower;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
@@ -20,7 +21,7 @@ public class WaterBoard extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("WaterBoard.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("WaterBoard_Outline.png"));
 
-    private static final int AMT = 5;
+    private static final int AMT = 4;
 
     public WaterBoard() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.FLAT);
@@ -32,7 +33,7 @@ public class WaterBoard extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             addToBot(new RelicAboveCreatureAction(m, this));
-            addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, AMT), AMT, true));
+            addToBot(new ApplyPowerAction(m, p, new DrownPower(m, p, AMT), AMT, true));
         }
     }
 

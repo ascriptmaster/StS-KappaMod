@@ -1,5 +1,6 @@
 package com.ascript.KappaMod.actions;
 
+import com.ascript.KappaMod.enums.KappaAttackEffect;
 import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -15,7 +16,7 @@ public class KappaKapAction extends AbstractGameAction {
             amt = AbstractDungeon.player.getPower(FloodPower.POWER_ID).amount;
         }
         if (amt > 0) {
-            addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AttackEffect.POISON));
+            addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), KappaAttackEffect.SPLASH));
         } else {
             addToTop(new GainBlockAction(AbstractDungeon.player, 3));
         }

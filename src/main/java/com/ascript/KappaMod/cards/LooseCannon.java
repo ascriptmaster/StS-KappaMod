@@ -30,7 +30,7 @@ public class LooseCannon extends AbstractDynamicCard {
     
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
     }
     
     @Override

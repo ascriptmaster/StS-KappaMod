@@ -99,7 +99,7 @@
     ]
   },
   "KappaMod:ReactiveArmorPower": {
-    "NAME": "Bubble Barrier",
+    "NAME": "Reactive Armor",
     "DESCRIPTIONS": [
       "The first time you are attacked, deal #b",
       " damage back."

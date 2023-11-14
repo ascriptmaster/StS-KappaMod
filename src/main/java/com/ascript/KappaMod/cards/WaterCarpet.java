@@ -3,11 +3,11 @@ package com.ascript.KappaMod.cards;
 import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.ActionPerBubbledCardAction;
+import com.ascript.KappaMod.actions.BubbleFromHandAction;
 import com.ascript.KappaMod.actions.BubbleTopCardAction;
+import com.ascript.KappaMod.actions.WaterCarpetAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.unique.SkillFromDeckToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -37,16 +37,13 @@ public class WaterCarpet extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i=0; i < magicNumber; i++) {
-            addToBot(new BubbleTopCardAction());
-        }
-        addToBot(new ActionPerBubbledCardAction(() -> new GainBlockAction(p, block)));
+        addToBot(new BubbleFromHandAction(p, magicNumber, false, c -> new WaterCarpetAction(p, this, c)));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

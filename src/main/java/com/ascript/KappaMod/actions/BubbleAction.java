@@ -2,6 +2,7 @@ package com.ascript.KappaMod.actions;
 
 import com.ascript.KappaMod.bubbles.CardBubble;
 import com.ascript.KappaMod.cards.interfaces.BubbleListeningCardInterface;
+import com.ascript.KappaMod.powers.interfaces.BubbleListeningPowerInterface;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,9 +25,9 @@ public class BubbleAction extends AbstractGameAction {
                 ((BubbleListeningCardInterface) card).onBubble();
             }
             AbstractDungeon.player.powers.stream()
-                    .filter(BubbleListeningCardInterface.class::isInstance)
-                    .map(BubbleListeningCardInterface.class::cast)
-                    .forEach(BubbleListeningCardInterface::onBubble);
+                    .filter(BubbleListeningPowerInterface.class::isInstance)
+                    .map(BubbleListeningPowerInterface.class::cast)
+                    .forEach(p -> p.onBubble(card));
         } else {
             addToTop(new BubbleAction(card));
             addToTop(new PopAction(AbstractDungeon.player));
