@@ -1,11 +1,13 @@
 package com.ascript.KappaMod.powers;
 
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.patches.KappaFields;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import static com.ascript.KappaMod.KappaMod.makePowerPath;
@@ -58,6 +60,11 @@ public class FloodPower extends TwoAmountPower {
     }
 
     @Override
+    public void onInitialApplication() {
+        KappaFields.flood.get(AbstractDungeon.player).update();
+    }
+
+    @Override
     public void stackPower(int stackAmount) {
         amount += stackAmount;
         if (amount >= MAX_AMT) {
@@ -69,6 +76,7 @@ public class FloodPower extends TwoAmountPower {
             amount = -MAX_AMT;
             amount2 = 1;
         }
+        KappaFields.flood.get(AbstractDungeon.player).update();
     }
 
     @Override
@@ -83,6 +91,7 @@ public class FloodPower extends TwoAmountPower {
             amount = -MAX_AMT;
             amount2 = 1;
         }
+        KappaFields.flood.get(AbstractDungeon.player).update();
     }
 
     @Override

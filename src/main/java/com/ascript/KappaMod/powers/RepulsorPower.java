@@ -54,4 +54,8 @@ public class RepulsorPower extends AbstractPower {
     public void atStartOfTurn() {
         this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this));
     }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }

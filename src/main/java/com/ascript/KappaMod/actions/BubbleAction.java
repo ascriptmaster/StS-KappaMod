@@ -28,6 +28,7 @@ public class BubbleAction extends AbstractGameAction {
                     .filter(BubbleListeningPowerInterface.class::isInstance)
                     .map(BubbleListeningPowerInterface.class::cast)
                     .forEach(p -> p.onBubble(card));
+            card.resetAttributes();
         } else {
             addToTop(new BubbleAction(card));
             addToTop(new PopAction(AbstractDungeon.player));

@@ -45,4 +45,10 @@ public class ShikirodamaExtraction extends AbstractDynamicCard {
             initializeDescription();
         }
     }
+
+    @Override
+    public float getTitleFontSize()
+    {
+        return 17;
+    }
 }

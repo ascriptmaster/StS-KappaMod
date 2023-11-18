@@ -12,6 +12,7 @@ import com.ascript.KappaMod.relics.WaterBoard;
 import com.ascript.KappaMod.util.IDCheckDontTouchPls;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.ascript.KappaMod.variables.DrownVariable;
+import com.ascript.KappaMod.variables.SplashDamageVariable;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -287,7 +288,7 @@ public class KappaMod implements
         
         logger.info("Add variables");
         
-        //BaseMod.addDynamicVariable(new DefaultCustomVariable());
+        BaseMod.addDynamicVariable(new SplashDamageVariable());
         BaseMod.addDynamicVariable(new DrownVariable());
 
         logger.info("Adding and unlocking cards");

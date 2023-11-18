@@ -6,26 +6,30 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static com.ascript.KappaMod.KappaMod.makeID;
 
-public class DefaultCustomVariable extends DynamicVariable {
+public class SplashDamageVariable extends DynamicVariable {
     
     @Override
     public String key() {
-        return makeID("ENERGY_DAMAGE");
+        return makeID("SPLASH_DAMAGE");
     }
     
     @Override
     public boolean isModified(AbstractCard card) {
-        return card.isDamageModified;
+        AbstractCard clone = card.makeStatEquivalentCopy();
+        clone.applyPowers();
+        return clone.isDamageModified;
     }
     
     @Override
     public int value(AbstractCard card) {
-        return card.damage * EnergyPanel.getCurrentEnergy();
+        AbstractCard clone = card.makeStatEquivalentCopy();
+        clone.applyPowers();
+        return clone.damage;
     }
     
     @Override
     public int baseValue(AbstractCard card) {
-        return card.baseDamage * EnergyPanel.getCurrentEnergy();
+        return card.baseDamage;
     }
     
     @Override

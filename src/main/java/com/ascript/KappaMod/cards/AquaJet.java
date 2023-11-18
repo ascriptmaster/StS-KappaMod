@@ -79,14 +79,4 @@ public class AquaJet extends AbstractDynamicCard {
     public void initializeDescription() {
         super.initializeDescription();
     }
-
-    @Override
-    public float getTitleFontSize()
-    {
-        if (NAME.length() > 16) {
-            return 15;
-        } else {
-            return 20;
-        }
-    }
 }

@@ -63,4 +63,9 @@ public class WaterSwing extends AbstractDynamicCard {
             initializeDescription();
         }
     }
+
+    @Override
+    public float getTitleFontSize() {
+        return 18;
+    }
 }

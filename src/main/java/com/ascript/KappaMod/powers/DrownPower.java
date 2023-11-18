@@ -92,9 +92,14 @@ public class DrownPower extends TwoAmountPower {
     @Override
     public void updateDescription() {
         if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[1] + amount2;
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount2;
+        }
+        if (amount > 1) {
+            description += DESCRIPTIONS[2] + Math.ceil(amount2 / 2.0) + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
+        } else {
+            description += DESCRIPTIONS[5];
         }
     }
 }

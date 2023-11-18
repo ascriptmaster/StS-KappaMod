@@ -2,6 +2,7 @@ package com.ascript.KappaMod.cards;
 
 import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.actions.FloatAction;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.FloodPower;
@@ -30,14 +31,13 @@ public class GenbuShell extends CustomCard {
     public static final AbstractCard.CardColor COLOR = TheKappa.Enums.COLOR_AQUA;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 9;
     private static final int UPGRADE_PLUS_BLOCK = 3;
-    private static final int RECEDING_PLUS_BLOCK = 3;
 
     public GenbuShell() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = magicNumber = 1;
         tags.add(KappaTags.RIPPLE);
     }
 
@@ -45,19 +45,13 @@ public class GenbuShell extends CustomCard {
         addToBot(new RippleAction(p, magicNumber));
         addToBot(new GainBlockAction(p, p, this.block));
         if (FloodPower.surging(p)) {
-            addToBot(new DrawCardAction(magicNumber));
+            addToBot(new FloatAction(magicNumber));
         }
     }
 
     @Override
-    public void applyPowers() {
-        int realBase = baseBlock;
-        if (FloodPower.receding(AbstractDungeon.player)) {
-            baseBlock += RECEDING_PLUS_BLOCK;
-        }
-        super.applyPowers();
-        baseBlock = realBase;
-        isBlockModified = baseBlock != block;
+    public void triggerOnGlowCheck() {
+        glowColor = FloodPower.surging(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     public AbstractCard makeCopy() {

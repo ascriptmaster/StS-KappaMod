@@ -39,6 +39,7 @@ public class KegonGun extends AbstractDynamicCard {
         for (int i = 0; i < magicNumber; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), KappaAttackEffect.SPLASH));
         }
+        magicNumber = baseMagicNumber = -1;
     }
 
     @Override
@@ -56,12 +57,14 @@ public class KegonGun extends AbstractDynamicCard {
         } else {
             magicNumber = (int) count;
         }
+        baseMagicNumber = magicNumber;
+        isMagicNumberModified = false;
     }
 
     @Override
-    public void onMoveToDiscard() {
-        magicNumber = -1;
-        initializeDescription();
+    public void resetAttributes() {
+        baseMagicNumber = -1;
+        super.resetAttributes();
     }
 
     private boolean isOtherAtk(AbstractCard card) {

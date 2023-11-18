@@ -19,7 +19,7 @@ public class KappaFlashFlood extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheKappa.Enums.COLOR_AQUA;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     private static final int MAGIC = 4;
     private static final int UPGRADE_PLUS_MAGIC = 3;

@@ -3,8 +3,12 @@ package com.ascript.KappaMod.cards;
 import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.ActionPerBubbledCardAction;
+import com.ascript.KappaMod.actions.BubbleFromHandAction;
+import com.ascript.KappaMod.actions.FloatAction;
 import com.ascript.KappaMod.characters.TheKappa;
+import com.ascript.KappaMod.enums.KappaAttackEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,20 +31,20 @@ public class Bubblebeam extends CustomCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     public Bubblebeam() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ActionPerBubbledCardAction(() ->
-                new DamageRandomEnemyAction(new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.BLUNT_LIGHT)
-        ));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), KappaAttackEffect.SPLASH));
+        addToBot(new FloatAction(magicNumber));
+        addToBot(new BubbleFromHandAction(p, magicNumber, false));
     }
 
     @Override

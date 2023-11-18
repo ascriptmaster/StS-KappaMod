@@ -116,10 +116,10 @@ public class TheKappa extends CustomPlayer {
             retVal.add(KappaBasicStrike.ID);
         }
         retVal.add(Washout.ID);
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<4; i++) {
             retVal.add(KappaBasicDefend.ID);
         }
-        retVal.add(BubbleBounce.ID);
+        retVal.add(BubbleBlower.ID);
 
         return retVal;
     }

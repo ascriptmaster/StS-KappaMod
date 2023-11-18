@@ -1,5 +1,6 @@
 package com.ascript.KappaMod.cards;
 
+import basemod.AutoAdd;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@AutoAdd.Ignore
 public class SignboardSmash extends AbstractDynamicCard {
 
     public static final String ID = KappaMod.makeID(SignboardSmash.class.getSimpleName());

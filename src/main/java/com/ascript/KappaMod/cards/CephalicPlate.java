@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class CephalicPlate extends AbstractDynamicCard implements BubbleListeningCardInterface {
 
     public static final String ID = KappaMod.makeID(CephalicPlate.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Attack.png");
+    public static final String IMG = KappaMod.makeCardPath("CephalicPlate.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -25,7 +25,7 @@ public class CephalicPlate extends AbstractDynamicCard implements BubbleListenin
     private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 3;
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 2;
 
     public CephalicPlate() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -51,5 +51,11 @@ public class CephalicPlate extends AbstractDynamicCard implements BubbleListenin
     @Override
     public void onBubble() {
         upgradeDamage(magicNumber);
+    }
+
+    @Override
+    public float getTitleFontSize()
+    {
+        return 17;
     }
 }

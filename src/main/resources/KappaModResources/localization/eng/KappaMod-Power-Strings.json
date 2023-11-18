@@ -118,9 +118,12 @@
   "KappaMod:DrownPower": {
     "NAME": "Drown",
     "DESCRIPTIONS": [
-      "At the end of your turn while #ySubmerged, lose #b",
-      "At the end of its turn while #ySubmerged, loses #b",
-      " HP. If not #ySubmerged, reduce #yDrown by half."
+      "At the end of your turn, take #b",
+      "At the end of its turn, takes #b",
+      " damage, then increases damage by #b",
+      ". Stays #yDrowning for #b",
+      " more turns.",
+      " damage, then stops #yDrowning."
     ]
   },
   "KappaMod:DrawReductionNextTurnPower": {
@@ -159,6 +162,13 @@
     "DESCRIPTIONS": [
       "When attacked, applies #b",
       " #yWeak back."
+    ]
+  },
+  "KappaMod:CascadingPower": {
+    "NAME": "Cascading Torrent",
+    "DESCRIPTIONS": [
+      "Whenever you #ykappamod:Ripple, gain #b",
+      " #yStrength and #yDexterity this turn."
     ]
   }
 }

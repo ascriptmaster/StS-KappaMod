@@ -6,7 +6,7 @@
       "bubbled",
       "bubbles"
     ],
-    "DESCRIPTION": "Placed in a bubble. Whenever you receive unblocked attack damage, a bubble pops and its card is put into your hand."
+    "DESCRIPTION": "Placed in your first empty bubble slot. Whenever you receive unblocked attack damage OR Bubble with no empty bubble slots, your first Bubble pops and its card is put into your hand."
   },
   {
     "PROPER_NAME": "Float",

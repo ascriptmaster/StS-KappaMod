@@ -1,5 +1,6 @@
 package com.ascript.KappaMod.actions;
 
+import com.ascript.KappaMod.KappaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +13,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.Iterator;
 
 public class BubbleFromDiscardAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleSelectionAction");
+    private static final String id = KappaMod.makeID("BubbleSelectionAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(id);
     public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
 

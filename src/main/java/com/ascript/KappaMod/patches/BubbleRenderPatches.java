@@ -3,6 +3,7 @@ package com.ascript.KappaMod.patches;
 import com.ascript.KappaMod.actions.PopAction;
 import com.ascript.KappaMod.bubbles.AbstractBubble;
 import com.ascript.KappaMod.bubbles.CardBubble;
+import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -24,6 +25,13 @@ public class BubbleRenderPatches {
             paramtypez = {SpriteBatch.class}
     )
     public static class BubbleRenderPatch {
+        @SpirePrefixPatch
+        public static void renderFlood(AbstractPlayer __instance, SpriteBatch sb) {
+            if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && (__instance instanceof TheKappa) && !__instance.isDead) {
+                KappaFields.flood.get(__instance).render(sb);
+            }
+        }
+
         @SpirePostfixPatch
         public static void renderBubble(AbstractPlayer __instance, SpriteBatch sb) {
             if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && !__instance.isDead) {
@@ -58,6 +66,7 @@ public class BubbleRenderPatches {
                     b.updateAnimation();
                 }
             }
+            KappaFields.flood.get(__instance).updateAnimation();
         }
     }
 

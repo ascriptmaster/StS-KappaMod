@@ -38,7 +38,7 @@
   },
   "KappaMod:GenbuShell": {
     "NAME": "Genbu Shell",
-    "DESCRIPTION": "Gain !B! Block. NL kappamod:Surging: kappamod:Float !M!. NL kappamod:Receding: Card has +3 Block."
+    "DESCRIPTION": "Gain !B! Block. NL kappamod:Ripple !M!. NL kappamod:Surging: kappamod:Float !M!."
   },
   "KappaMod:HydroCamouflage": {
     "NAME": "Hydro Camouflage",
@@ -77,7 +77,7 @@
   },
   "KappaMod:MassProduction": {
     "NAME": "Mass Production",
-    "DESCRIPTION": "{@@} Choose a Skill or Power, except *Mass *Production. Add {!M!|@=!M!|1=a} cop{!M!|@=ies|1=y} of that card into your hand. NL Exhaust."
+    "DESCRIPTION": "{@@}Choose a Skill or Power, except *Mass *Production. Add {!M!|@=!M!|1=a} cop{!M!|@=ies|1=y} of that card into your hand. NL Exhaust."
   },
   "KappaMod:NessieSortie": {
     "NAME": "Nessie Sortie",
@@ -85,11 +85,11 @@
   },
   "KappaMod:OozeFlooding": {
     "NAME": "Ooze Flooding",
-    "DESCRIPTION": "{@@}Apply X{!Upgrades!|>1=+1} Weak. NL Apply X{!Upgrades!|>1=+1} Submerge. NL Exhaust."
+    "DESCRIPTION": "{@@}Apply X{!Upgrades!|>0=+1} Weak. NL Apply X{!Upgrades!|>0=+1} kappamod:Submerge. NL Exhaust."
   },
   "KappaMod:OpticalCamouflage": {
     "NAME": "Optical Camouflage",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Next turn, if you didn't take unblocked attack damage, draw !M! card{!M!|>1=s} at the start of your next turn."
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Next turn, if you didn't take unblocked attack damage, draw !M! card{!M!|>1=s}."
   },
   "KappaMod:Overcharge": {
     "NAME": "Overcharge",
@@ -150,7 +150,7 @@
   },
   "KappaMod:WaterSwing": {
     "NAME": "Water Bomb Giant Swing",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Receding: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Receding: Deal !KappaMod:SPLASH_DAMAGE! damage to ALL enemies."
   },
   "KappaMod:BubbleBarrier": {
     "NAME": "Bubble Barrier",
@@ -158,7 +158,7 @@
   },
   "KappaMod:Bubblebeam": {
     "NAME": "Bubblebeam",
-    "DESCRIPTION": "Deal !D! damage for each of your kappamod:Bubbled cards."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL kappamod:Float !M!. NL Bubble !M! card{!M!|1=|@=s}."
   },
   "KappaMod:CascadingTorrent": {
     "NAME": "Cascading Torrent",
@@ -174,7 +174,7 @@
   },
   "KappaMod:KegonGun": {
     "NAME": "Kegon Gun",
-    "DESCRIPTION": "{@@}Deal !D! damage for each other Attack in your hand and kappamod:Bubbles.{!M!|1= NL (You have !M! other Attack.)|>0= NL (You have !M! other Attacks.)}"
+    "DESCRIPTION": "{@@}Deal !D! damage for each other Attack in your hand and kappamod:Bubbles.{!M!|1= NL (You have !M! other Attack.)|>1= NL (You have !M! other Attacks.)}"
   },
   "KappaMod:RapidsRush": {
     "NAME": "Rapids Rush",
@@ -186,7 +186,7 @@
   },
   "KappaMod:Whirlpool": {
     "NAME": "Whirlpool",
-    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Submerge to ALL enemies X times."
+    "DESCRIPTION": "Deal !D! damage and apply !M! kappamod:Drown to ALL enemies X times."
   },
   "KappaMod:CoreCharge": {
     "NAME": "Core Charge",
@@ -226,6 +226,14 @@
   },
   "KappaMod:Washout": {
     "NAME": "Washout",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: Deal extra damage equal to your *Flood."
+    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Surging: Apply !M! kappamod:Submerge."
+  },
+  "KappaMod:BubbleBlower": {
+    "NAME": "Bubble Blower",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL kappamod:Bubble {!M!|1=a|@=!M!} card{!M!|1=|@=s}."
+  },
+  "KappaMod:EmpoweringBubbles": {
+    "NAME": "Empowering Bubbles",
+    "DESCRIPTION": "Whenever a card is kappamod:Bubbled, increase its damage and Block by !M! this combat."
   }
 }

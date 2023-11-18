@@ -59,28 +59,6 @@ public class KikuIchimonji extends AbstractDynamicCard {
     }
 
     @Override
-    public void applyPowers() {
-        int realBase = baseDamage;
-        if (FloodPower.receding(AbstractDungeon.player)) {
-            baseDamage++;
-        }
-        super.applyPowers();
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBase = baseDamage;
-        if (FloodPower.receding(AbstractDungeon.player)) {
-            baseDamage++;
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

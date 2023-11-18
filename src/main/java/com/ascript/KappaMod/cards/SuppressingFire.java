@@ -9,6 +9,7 @@ import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -50,30 +51,13 @@ public class SuppressingFire extends AbstractDynamicCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = FloodPower.receding(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+    }
+
     private void addSubmergeToBot(AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new SubmergePower(m, AbstractDungeon.player, magicNumber), magicNumber, true));
-    }
-
-    @Override
-    public void applyPowers() {
-        int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
-            baseDamage++;
-        }
-        super.applyPowers();
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
-            baseDamage++;
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
     }
     
     @Override

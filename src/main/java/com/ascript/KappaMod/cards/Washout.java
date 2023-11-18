@@ -5,8 +5,11 @@ import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
 import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,8 +32,8 @@ public class Washout extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     public Washout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -43,30 +46,14 @@ public class Washout extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new RippleAction(p, 1));
+        if (FloodPower.surging(p)) {
+            addToBot(new ApplyPowerAction(m, p, new SubmergePower(m, p, magicNumber), magicNumber));
+        }
     }
 
     @Override
-    public void applyPowers() {
-        int realBase = baseDamage;
-        AbstractPlayer p = AbstractDungeon.player;
-        if (FloodPower.surging(p) && p.hasPower(FloodPower.POWER_ID)) {
-            baseDamage += p.getPower(FloodPower.POWER_ID).amount;
-        }
-        super.applyPowers();
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBase = baseDamage;
-        AbstractPlayer p = AbstractDungeon.player;
-        if (FloodPower.surging(p) && p.hasPower(FloodPower.POWER_ID)) {
-            baseDamage += p.getPower(FloodPower.POWER_ID).amount;
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = realBase;
-        isDamageModified = baseDamage != damage;
+    public void triggerOnGlowCheck() {
+        glowColor = FloodPower.surging(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override
@@ -74,6 +61,7 @@ public class Washout extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

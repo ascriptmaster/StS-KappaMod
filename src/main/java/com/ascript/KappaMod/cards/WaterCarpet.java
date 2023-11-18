@@ -32,7 +32,7 @@ public class WaterCarpet extends CustomCard {
 
     public WaterCarpet() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
         baseBlock = 4;
     }
 
@@ -43,7 +43,7 @@ public class WaterCarpet extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBlock(1);
             initializeDescription();
         }
     }

@@ -1,5 +1,6 @@
 package com.ascript.KappaMod.actions;
 
+import com.ascript.KappaMod.KappaMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
@@ -14,19 +15,16 @@ import java.util.Iterator;
 import java.util.function.Function;
 
 public class BubbleFromHandAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BubbleSelectionAction");
+    private static final String id = KappaMod.makeID("BubbleSelectionAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(id);
     public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
     private boolean isRandom;
     private Function<AbstractCard, AbstractGameAction> followUpAction;
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
 
-    public BubbleFromHandAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom) {
-        this.p = (AbstractPlayer)target;
-        this.isRandom = isRandom;
-        this.setValues(target, source, amount);
-        this.actionType = ActionType.DISCARD;
-        this.duration = DURATION;
+    public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random) {
+        this(player, amount, random, null);
     }
 
     public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random, Function<AbstractCard, AbstractGameAction> followUp) {

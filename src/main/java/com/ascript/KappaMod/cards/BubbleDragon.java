@@ -40,4 +40,10 @@ public class BubbleDragon extends AbstractDynamicCard {
             initializeDescription();
         }
     }
+
+    @Override
+    public float getTitleFontSize()
+    {
+        return 20;
+    }
 }

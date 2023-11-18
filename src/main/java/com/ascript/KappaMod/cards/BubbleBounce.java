@@ -1,5 +1,6 @@
 package com.ascript.KappaMod.cards;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
 import com.ascript.KappaMod.KappaMod;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@AutoAdd.Ignore
 public class BubbleBounce extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(BubbleBounce.class.getSimpleName());
