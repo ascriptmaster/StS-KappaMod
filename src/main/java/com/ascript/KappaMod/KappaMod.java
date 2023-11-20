@@ -97,7 +97,7 @@ public class KappaMod implements
     private static final String KAPPA_PORTRAIT = "KappaModResources/images/charSelect/TempNitoriBG.jpg";
     public static final String KAPPA_SHOULDER_1 = "KappaModResources/images/char/defaultCharacter/shoulder.png";
     public static final String KAPPA_SHOULDER_2 = "KappaModResources/images/char/defaultCharacter/shoulder2.png";
-    public static final String KAPPA_CORPSE = "KappaModResources/images/char/mechanist/corpse.png";
+    public static final String KAPPA_CORPSE = "KappaModResources/images/char/kappa/corpse.png";
     
     public static final String BADGE_IMAGE = "KappaModResources/images/Badge.png";
     

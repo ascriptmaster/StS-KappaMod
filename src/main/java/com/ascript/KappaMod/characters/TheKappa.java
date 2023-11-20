@@ -54,23 +54,23 @@ public class TheKappa extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
     
     public static final String[] orbTextures = {
-            "KappaModResources/images/char/defaultCharacter/orb/layer1.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer2.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer3.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer4.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer5.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer6.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer1d.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer2d.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer3d.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer4d.png",
-            "KappaModResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "KappaModResources/images/char/kappa/orb/layer1.png",
+            "KappaModResources/images/char/kappa/orb/layer2.png",
+            "KappaModResources/images/char/kappa/orb/layer3.png",
+            "KappaModResources/images/char/kappa/orb/layer4.png",
+            "KappaModResources/images/char/kappa/orb/layer5.png",
+            "KappaModResources/images/char/kappa/orb/layer6.png",
+            "KappaModResources/images/char/kappa/orb/layer1d.png",
+            "KappaModResources/images/char/kappa/orb/layer2d.png",
+            "KappaModResources/images/char/kappa/orb/layer3d.png",
+            "KappaModResources/images/char/kappa/orb/layer4d.png",
+            "KappaModResources/images/char/kappa/orb/layer5d.png",};
     
     public TheKappa(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "KappaModResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "KappaModResources/images/char/kappa/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "KappaModResources/images/char/mechanist/Spriter/kappa.scml"));
+                        "KappaModResources/images/char/kappa/Spriter/kappa.scml"));
         
         
         initializeClass(null,
