@@ -1,9 +1,7 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class WaterDriller extends CustomCard {
+public class WaterDriller extends AbstractKappaCard {
     public static final String ID = KappaMod.makeID(WaterDriller.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -33,7 +31,7 @@ public class WaterDriller extends CustomCard {
     private static final int UPGRADE_PLUS_DMG = 3;
 
     public WaterDriller() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
     }
 

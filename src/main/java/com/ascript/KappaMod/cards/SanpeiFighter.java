@@ -6,13 +6,12 @@ import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
-public class SanpeiFighter extends AbstractDynamicCard {
+public class SanpeiFighter extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(SanpeiFighter.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

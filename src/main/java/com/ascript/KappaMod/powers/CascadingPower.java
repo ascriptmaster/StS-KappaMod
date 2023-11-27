@@ -4,7 +4,6 @@ import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.enums.KappaTags;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

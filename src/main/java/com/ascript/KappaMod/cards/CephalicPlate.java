@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class CephalicPlate extends AbstractDynamicCard implements BubbleListeningCardInterface {
+public class CephalicPlate extends AbstractKappaCard implements BubbleListeningCardInterface {
 
     public static final String ID = KappaMod.makeID(CephalicPlate.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("CephalicPlate.png");

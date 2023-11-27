@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SuperScope3D extends AbstractDynamicCard {
+public class SuperScope3D extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID("SuperScope3D");
     public static final String IMG = KappaMod.makeCardPath("SuperScope.png");

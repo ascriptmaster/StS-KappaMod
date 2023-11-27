@@ -1,6 +1,5 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.OpticalCamouflagePower;
@@ -12,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class OpticalCamouflage extends CustomCard {
+public class OpticalCamouflage extends AbstractKappaCard {
     public static final String ID = KappaMod.makeID(OpticalCamouflage.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -33,7 +32,7 @@ public class OpticalCamouflage extends CustomCard {
     private static final int UPGRADE_PLUS_DRAW = 1;
 
     public OpticalCamouflage() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = DRAW;
     }

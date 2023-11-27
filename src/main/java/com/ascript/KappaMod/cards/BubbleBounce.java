@@ -32,7 +32,7 @@ public class BubbleBounce extends AbstractKappaCard {
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public BubbleBounce() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
         CardFields.bubbleOnUse.set(this, true);
     }

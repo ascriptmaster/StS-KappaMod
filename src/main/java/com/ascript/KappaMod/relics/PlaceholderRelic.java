@@ -1,10 +1,10 @@
 package com.ascript.KappaMod.relics;
 
 import basemod.abstracts.CustomRelic;
-import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.util.TextureLoader;
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static com.ascript.KappaMod.KappaMod.makeRelicOutlinePath;
 import static com.ascript.KappaMod.KappaMod.makeRelicPath;

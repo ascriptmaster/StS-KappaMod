@@ -2,7 +2,6 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.AerialBlasterPower;
 import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,9 +9,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-public class Ambush extends AbstractDynamicCard {
+public class Ambush extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(Ambush.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Ambush.png");

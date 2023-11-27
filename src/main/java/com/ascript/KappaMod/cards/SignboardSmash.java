@@ -4,8 +4,8 @@ import basemod.AutoAdd;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.enums.KappaTags;
+import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 @AutoAdd.Ignore
-public class SignboardSmash extends AbstractDynamicCard {
+public class SignboardSmash extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(SignboardSmash.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("SignboardSmash.png");

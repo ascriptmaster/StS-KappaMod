@@ -3,7 +3,6 @@ package com.ascript.KappaMod.relics;
 import basemod.abstracts.CustomRelic;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.powers.DrownPower;
-import com.ascript.KappaMod.powers.SubmergePower;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class DrenchingStrike extends AbstractDynamicCard {
+public class DrenchingStrike extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(DrenchingStrike.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("DrenchingStrike.png");

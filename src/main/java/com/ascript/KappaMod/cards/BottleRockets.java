@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BottleRockets extends AbstractDynamicCard {
+public class BottleRockets extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(BottleRockets.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

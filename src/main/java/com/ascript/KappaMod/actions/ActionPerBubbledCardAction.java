@@ -1,6 +1,5 @@
 package com.ascript.KappaMod.actions;
 
-import com.ascript.KappaMod.bubbles.CardBubble;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

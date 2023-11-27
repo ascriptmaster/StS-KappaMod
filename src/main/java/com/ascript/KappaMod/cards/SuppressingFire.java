@@ -13,11 +13,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.List;
 
-public class SuppressingFire extends AbstractDynamicCard {
+public class SuppressingFire extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(SuppressingFire.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

@@ -3,12 +3,11 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.DrownPower;
-import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class KappaPororoca extends AbstractDynamicCard {
+public class KappaPororoca extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(KappaPororoca.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

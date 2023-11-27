@@ -1,7 +1,5 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -12,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class KappaBasicDefend extends CustomCard {
+public class KappaBasicDefend extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(KappaBasicDefend.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,7 +30,7 @@ public class KappaBasicDefend extends CustomCard {
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public KappaBasicDefend() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.tags.add(CardTags.STARTER_DEFEND);
         this.baseBlock = BLOCK;
     }

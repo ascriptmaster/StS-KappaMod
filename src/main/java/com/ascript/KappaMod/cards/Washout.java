@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Washout extends AbstractDynamicCard {
+public class Washout extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(Washout.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

@@ -1,6 +1,8 @@
 package com.ascript.KappaMod.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -11,8 +13,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
-import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.util.TextureLoader;
 
 import static com.ascript.KappaMod.KappaMod.makeRelicOutlinePath;
 import static com.ascript.KappaMod.KappaMod.makeRelicPath;

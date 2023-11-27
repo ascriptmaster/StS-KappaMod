@@ -2,16 +2,13 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 
-public class CoreCharge extends AbstractDynamicCard {
+public class CoreCharge extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(CoreCharge.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("CoreCharge.png");

@@ -3,15 +3,12 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.BubbleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 
-public class Salvage extends AbstractDynamicCard {
+public class Salvage extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(Salvage.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

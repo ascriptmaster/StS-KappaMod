@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class KappaFlashFlood extends AbstractDynamicCard {
+public class KappaFlashFlood extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(KappaFlashFlood.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class LooseCannon extends AbstractDynamicCard {
+public class LooseCannon extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(LooseCannon.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

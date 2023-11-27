@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class AerialBlaster extends AbstractDynamicCard {
+public class AerialBlaster extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(AerialBlaster.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

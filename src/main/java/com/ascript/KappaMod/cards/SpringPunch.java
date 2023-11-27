@@ -3,8 +3,8 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.enums.KappaTags;
+import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.powers.SubmergePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,9 +18,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
-public class SpringPunch extends AbstractDynamicCard {
+public class SpringPunch extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(SpringPunch.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

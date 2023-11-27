@@ -1,8 +1,6 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.actions.BubbleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class KappaBasicStrike extends CustomCard {
+public class KappaBasicStrike extends AbstractKappaCard {
     
     public static final String ID = KappaMod.makeID(KappaBasicStrike.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -32,7 +30,7 @@ public class KappaBasicStrike extends CustomCard {
     private static final int UPGRADE_PLUS_DMG = 3;
     
     public KappaBasicStrike() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);

@@ -1,13 +1,11 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.FloatAction;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.enums.KappaTags;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class GenbuShell extends CustomCard {
+public class GenbuShell extends AbstractKappaCard {
     public static final String ID = KappaMod.makeID(GenbuShell.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -35,7 +33,7 @@ public class GenbuShell extends CustomCard {
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public GenbuShell() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
         this.baseMagicNumber = magicNumber = 1;
         tags.add(KappaTags.RIPPLE);

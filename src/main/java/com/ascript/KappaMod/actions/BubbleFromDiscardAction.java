@@ -10,8 +10,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-import java.util.Iterator;
-
 public class BubbleFromDiscardAction extends AbstractGameAction {
     private static final String id = KappaMod.makeID("BubbleSelectionAction");
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(id);

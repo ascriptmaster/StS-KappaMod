@@ -3,8 +3,8 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.enums.KappaTags;
+import com.ascript.KappaMod.powers.FloodPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
-public class Hydrometry extends AbstractDynamicCard {
+public class Hydrometry extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(Hydrometry.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

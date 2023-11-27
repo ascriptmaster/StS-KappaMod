@@ -10,10 +10,8 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
-public class SteamBlaster extends AbstractDynamicCard {
+public class SteamBlaster extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(SteamBlaster.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

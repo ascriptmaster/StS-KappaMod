@@ -2,15 +2,12 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class ShikirodamaExtraction extends AbstractDynamicCard {
+public class ShikirodamaExtraction extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(ShikirodamaExtraction.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

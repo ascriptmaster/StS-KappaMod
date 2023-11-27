@@ -2,12 +2,12 @@ package com.ascript.KappaMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.ascript.KappaMod.util.TextureLoader;
 
 import static com.ascript.KappaMod.KappaMod.makeRelicOutlinePath;
 import static com.ascript.KappaMod.KappaMod.makeRelicPath;

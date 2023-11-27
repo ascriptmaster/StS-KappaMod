@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BubbleBarrier extends AbstractDynamicCard implements BubbleListeningCardInterface {
+public class BubbleBarrier extends AbstractKappaCard implements BubbleListeningCardInterface {
 
     public static final String ID = KappaMod.makeID(BubbleBarrier.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

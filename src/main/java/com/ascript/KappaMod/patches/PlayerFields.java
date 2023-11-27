@@ -5,7 +5,6 @@ import com.ascript.KappaMod.core.FloodManager;
 import com.ascript.KappaMod.vfx.FloodEffect;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.StaticSpireField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
 import java.util.ArrayList;

@@ -1,20 +1,17 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.RepulsorPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RepulsorShields extends CustomCard {
+public class RepulsorShields extends AbstractKappaCard {
     public static final String ID = KappaMod.makeID(RepulsorShields.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -34,7 +31,7 @@ public class RepulsorShields extends CustomCard {
     private static final int MAGIC = 1;
 
     public RepulsorShields() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = MAGIC;
     }

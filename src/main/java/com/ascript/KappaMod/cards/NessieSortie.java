@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class NessieSortie extends AbstractDynamicCard {
+public class NessieSortie extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(NessieSortie.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("NessieSortie.png");

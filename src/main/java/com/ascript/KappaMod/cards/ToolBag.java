@@ -1,6 +1,5 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ToolBag extends CustomCard {
+public class ToolBag extends AbstractKappaCard {
     public static final String ID = KappaMod.makeID(ToolBag.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -28,7 +27,7 @@ public class ToolBag extends CustomCard {
     private static final int COST = 1;
 
     public ToolBag() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {

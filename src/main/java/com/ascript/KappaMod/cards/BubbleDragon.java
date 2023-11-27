@@ -3,14 +3,10 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.BubbleDragonAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BubbleDragon extends AbstractDynamicCard {
+public class BubbleDragon extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(BubbleDragon.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

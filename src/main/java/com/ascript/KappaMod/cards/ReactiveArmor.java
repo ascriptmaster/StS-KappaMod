@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ReactiveArmor extends AbstractDynamicCard {
+public class ReactiveArmor extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(ReactiveArmor.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

@@ -1,13 +1,12 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.AutoAdd;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.OozeFloodingAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class OozeFlooding extends AbstractDynamicCard {
+public class OozeFlooding extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(OozeFlooding.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Skill.png");

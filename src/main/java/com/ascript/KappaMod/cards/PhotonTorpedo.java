@@ -6,7 +6,7 @@ import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class PhotonTorpedo extends AbstractDynamicCard {
+public class PhotonTorpedo extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID("PhotonTorpedo");
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

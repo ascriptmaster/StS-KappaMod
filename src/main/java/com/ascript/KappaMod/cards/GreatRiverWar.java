@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class GreatRiverWar extends AbstractDynamicCard {
+public class GreatRiverWar extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(GreatRiverWar.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("WarBeneathRiver.png");

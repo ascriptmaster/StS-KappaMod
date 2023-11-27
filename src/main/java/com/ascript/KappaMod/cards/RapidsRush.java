@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RapidsRush extends AbstractDynamicCard implements BubbleListeningCardInterface {
+public class RapidsRush extends AbstractKappaCard implements BubbleListeningCardInterface {
 
     public static final String ID = KappaMod.makeID(RapidsRush.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

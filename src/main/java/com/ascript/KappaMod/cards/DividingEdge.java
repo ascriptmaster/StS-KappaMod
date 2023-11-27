@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class DividingEdge extends AbstractDynamicCard {
+public class DividingEdge extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(DividingEdge.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("DividingEdge.png");

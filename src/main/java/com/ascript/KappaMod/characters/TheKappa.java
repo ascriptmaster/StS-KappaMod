@@ -2,7 +2,11 @@ package com.ascript.KappaMod.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
-import com.ascript.KappaMod.cards.*;
+import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.cards.BubbleBlower;
+import com.ascript.KappaMod.cards.KappaBasicDefend;
+import com.ascript.KappaMod.cards.KappaBasicStrike;
+import com.ascript.KappaMod.cards.Washout;
 import com.ascript.KappaMod.patches.PlayerFields;
 import com.ascript.KappaMod.relics.KappaKap;
 import com.badlogic.gdx.graphics.Color;
@@ -22,7 +26,6 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import com.ascript.KappaMod.KappaMod;
 
 import java.util.ArrayList;
 

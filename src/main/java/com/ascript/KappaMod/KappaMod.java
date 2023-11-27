@@ -5,13 +5,12 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.interfaces.*;
-import com.ascript.KappaMod.cards.*;
+import com.ascript.KappaMod.cards.KappaBasicStrike;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.relics.KappaKap;
 import com.ascript.KappaMod.relics.WaterBoard;
 import com.ascript.KappaMod.util.IDCheckDontTouchPls;
 import com.ascript.KappaMod.util.TextureLoader;
-import com.ascript.KappaMod.variables.DrownVariable;
 import com.ascript.KappaMod.variables.SplashDamageVariable;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -22,7 +21,6 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -289,7 +287,6 @@ public class KappaMod implements
         logger.info("Add variables");
         
         BaseMod.addDynamicVariable(new SplashDamageVariable());
-        BaseMod.addDynamicVariable(new DrownVariable());
 
         logger.info("Adding and unlocking cards");
 

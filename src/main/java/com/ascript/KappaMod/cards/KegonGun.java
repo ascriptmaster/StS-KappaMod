@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class KegonGun extends AbstractDynamicCard {
+public class KegonGun extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(KegonGun.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

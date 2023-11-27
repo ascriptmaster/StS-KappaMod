@@ -1,7 +1,6 @@
 package com.ascript.KappaMod.powers;
 
 import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.actions.FloatAction;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

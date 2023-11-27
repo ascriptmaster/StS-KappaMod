@@ -1,6 +1,5 @@
 package com.ascript.KappaMod.cards;
 
-import basemod.abstracts.CustomCard;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.CascadingPower;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class CascadingTorrent extends CustomCard {
+public class CascadingTorrent extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(CascadingTorrent.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -30,7 +29,7 @@ public class CascadingTorrent extends CustomCard {
     private static final int UPGRADE_MAGIC = 1;
 
     public CascadingTorrent() {
-        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

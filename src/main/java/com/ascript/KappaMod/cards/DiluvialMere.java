@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class DiluvialMere extends AbstractDynamicCard {
+public class DiluvialMere extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(DiluvialMere.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

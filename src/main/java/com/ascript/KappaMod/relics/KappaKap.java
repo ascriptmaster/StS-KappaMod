@@ -7,7 +7,6 @@ import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static com.ascript.KappaMod.KappaMod.makeRelicOutlinePath;
 import static com.ascript.KappaMod.KappaMod.makeRelicPath;

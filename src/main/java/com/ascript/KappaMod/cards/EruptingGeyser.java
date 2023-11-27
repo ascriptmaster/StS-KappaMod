@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EruptingGeyser extends AbstractDynamicCard {
+public class EruptingGeyser extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(EruptingGeyser.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("Attack.png");

@@ -1,6 +1,7 @@
 package com.ascript.KappaMod.orbs;
 
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -20,7 +21,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
-import com.ascript.KappaMod.util.TextureLoader;
 
 import static com.ascript.KappaMod.KappaMod.makeOrbPath;
 

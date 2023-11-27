@@ -2,13 +2,12 @@ package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.BubbleFromHandAction;
-import com.ascript.KappaMod.cards.interfaces.BubbleListeningCardInterface;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BubbleBlower extends AbstractDynamicCard {
+public class BubbleBlower extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(BubbleBlower.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("BubbleBlower.png");

@@ -5,6 +5,8 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.patches.relics.BottledPlaceholderField;
+import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.AutoplayCardAction;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
@@ -16,8 +18,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.ascript.KappaMod.patches.relics.BottledPlaceholderField;
-import com.ascript.KappaMod.util.TextureLoader;
 
 import java.util.Iterator;
 import java.util.function.Predicate;

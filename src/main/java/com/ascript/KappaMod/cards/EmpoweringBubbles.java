@@ -3,12 +3,11 @@ package com.ascript.KappaMod.cards;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.powers.EmpoweringBubblesPower;
-import com.ascript.KappaMod.powers.MountainRopewayPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EmpoweringBubbles extends AbstractDynamicCard {
+public class EmpoweringBubbles extends AbstractKappaCard {
 
     public static final String ID = KappaMod.makeID(EmpoweringBubbles.class.getSimpleName());
     public static final String IMG = KappaMod.makeCardPath("EmpoweringBubbles.png");
