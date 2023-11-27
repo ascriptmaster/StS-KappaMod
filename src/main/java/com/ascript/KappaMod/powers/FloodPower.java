@@ -1,7 +1,7 @@
 package com.ascript.KappaMod.powers;
 
 import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.patches.KappaFields;
+import com.ascript.KappaMod.patches.PlayerFields;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
@@ -44,6 +44,7 @@ public class FloodPower extends TwoAmountPower {
     }
 
     public static boolean surging(final AbstractCreature owner) {
+        if (owner == null) return true;
         if (owner.hasPower(OverflowPower.POWER_ID)) return true;
         if (owner.hasPower(POWER_ID)) {
             return owner.getPower(POWER_ID).amount >= 0;
@@ -52,6 +53,7 @@ public class FloodPower extends TwoAmountPower {
     }
 
     public static boolean receding(final AbstractCreature owner) {
+        if (owner == null) return false;
         if (owner.hasPower(OverflowPower.POWER_ID)) return true;
         if (owner.hasPower(POWER_ID)) {
             return owner.getPower(POWER_ID).amount < 0;
@@ -61,7 +63,7 @@ public class FloodPower extends TwoAmountPower {
 
     @Override
     public void onInitialApplication() {
-        KappaFields.flood.get(AbstractDungeon.player).update();
+        PlayerFields.flood.get(AbstractDungeon.player).update();
     }
 
     @Override
@@ -76,7 +78,7 @@ public class FloodPower extends TwoAmountPower {
             amount = -MAX_AMT;
             amount2 = 1;
         }
-        KappaFields.flood.get(AbstractDungeon.player).update();
+        PlayerFields.flood.get(AbstractDungeon.player).update();
     }
 
     @Override
@@ -91,7 +93,7 @@ public class FloodPower extends TwoAmountPower {
             amount = -MAX_AMT;
             amount2 = 1;
         }
-        KappaFields.flood.get(AbstractDungeon.player).update();
+        PlayerFields.flood.get(AbstractDungeon.player).update();
     }
 
     @Override

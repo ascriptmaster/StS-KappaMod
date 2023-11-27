@@ -2,7 +2,6 @@ package com.ascript.KappaMod.patches;
 
 import com.ascript.KappaMod.actions.PopAction;
 import com.ascript.KappaMod.bubbles.AbstractBubble;
-import com.ascript.KappaMod.bubbles.CardBubble;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -18,7 +17,7 @@ import javassist.CtBehavior;
 
 import java.util.List;
 
-public class BubbleRenderPatches {
+public class PlayerPatches {
     @SpirePatch(
             clz = AbstractPlayer.class,
             method = "render",
@@ -28,14 +27,14 @@ public class BubbleRenderPatches {
         @SpirePrefixPatch
         public static void renderFlood(AbstractPlayer __instance, SpriteBatch sb) {
             if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && (__instance instanceof TheKappa) && !__instance.isDead) {
-                KappaFields.flood.get(__instance).render(sb);
+                PlayerFields.flood.get(__instance).render(sb);
             }
         }
 
         @SpirePostfixPatch
         public static void renderBubble(AbstractPlayer __instance, SpriteBatch sb) {
             if ((AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT || AbstractDungeon.getCurrRoom() instanceof MonsterRoom) && !__instance.isDead) {
-                List<AbstractBubble> bubbles = KappaFields.bubbles.get(__instance);
+                List<AbstractBubble> bubbles = PlayerFields.bubbles.get(__instance);
                 for (AbstractBubble b : bubbles) {
                     b.render(sb);
                 }
@@ -50,7 +49,7 @@ public class BubbleRenderPatches {
     public static class BubbleUpdatePatch {
         @SpirePostfixPatch
         public static void updateBubble(AbstractPlayer __instance) {
-            List<AbstractBubble> bubbles = KappaFields.bubbles.get(__instance);
+            List<AbstractBubble> bubbles = PlayerFields.bubbles.get(__instance);
             for (AbstractBubble b : bubbles) {
                 b.update();
             }
@@ -58,23 +57,24 @@ public class BubbleRenderPatches {
     }
 
     @SpirePatch(clz = AbstractPlayer.class, method = "update")
-    public static class BubbleUpdateAnimPatch {
+    public static class UpdateAnimPatch {
         @SpirePostfixPatch
-        public static void updateBubbleAnim(AbstractPlayer __instance) {
+        public static void updateAnim(AbstractPlayer __instance) {
             if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.EVENT) {
-                for (AbstractBubble b : KappaFields.bubbles.get(__instance)) {
+                for (AbstractBubble b : PlayerFields.bubbles.get(__instance)) {
                     b.updateAnimation();
                 }
             }
-            KappaFields.flood.get(__instance).updateAnimation();
+            PlayerFields.flood.get(__instance).updateAnimation();
         }
     }
 
     @SpirePatch(clz = AbstractPlayer.class, method = "preBattlePrep")
-    public static class BubblePrepPatch {
+    public static class PrepPatch {
         @SpirePostfixPatch
-        public static void resetBubbles(AbstractPlayer __instance) {
+        public static void resetFields(AbstractPlayer __instance) {
             BubbleUtils.resetBubbles(__instance);
+            PlayerFields.floodMgr.get(__instance).prep();
         }
     }
 

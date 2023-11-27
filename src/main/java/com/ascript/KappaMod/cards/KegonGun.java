@@ -1,12 +1,9 @@
 package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.actions.BubbleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaAttackEffect;
-import com.ascript.KappaMod.patches.KappaFields;
 import com.ascript.KappaMod.util.BubbleUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;

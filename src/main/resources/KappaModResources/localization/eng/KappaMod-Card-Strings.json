@@ -235,5 +235,9 @@
   "KappaMod:EmpoweringBubbles": {
     "NAME": "Empowering Bubbles",
     "DESCRIPTION": "Whenever a card is kappamod:Bubbled, increase its damage and Block by !M! this combat."
+  },
+  "KappaMod:Salvage": {
+    "NAME": "Salvage",
+    "DESCRIPTION": "Add a random card to your kappamod:Bubbles. NL Exhaust."
   }
 }

@@ -3,7 +3,7 @@ package com.ascript.KappaMod.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.ascript.KappaMod.cards.*;
-import com.ascript.KappaMod.patches.KappaFields;
+import com.ascript.KappaMod.patches.PlayerFields;
 import com.ascript.KappaMod.relics.KappaKap;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -96,7 +96,7 @@ public class TheKappa extends CustomPlayer {
     protected void initializeClass(String imgUrl, String shoulder2ImgUrl, String shouldImgUrl, String corpseImgUrl,
                                    CharSelectInfo info, float hb_x, float hb_y, float hb_w, float hb_h, EnergyManager energy) {
         super.initializeClass(imgUrl, shoulder2ImgUrl, shouldImgUrl, corpseImgUrl, info, hb_x, hb_y, hb_w, hb_h, energy);
-        KappaFields.masterMaxBubbles.set(this, 3);
+        PlayerFields.masterMaxBubbles.set(this, 3);
     }
 
     @Override

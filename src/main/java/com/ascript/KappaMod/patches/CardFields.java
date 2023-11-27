@@ -8,6 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
         clz= AbstractCard.class,
         method= SpirePatch.CLASS
 )
-public class KappaCardFields {
+public class CardFields {
     public static SpireField<Boolean> bubbleOnUse = new SpireField<>(() -> false);
 }

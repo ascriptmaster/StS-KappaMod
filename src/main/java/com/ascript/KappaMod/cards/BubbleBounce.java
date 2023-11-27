@@ -1,16 +1,13 @@
 package com.ascript.KappaMod.cards;
 
 import basemod.AutoAdd;
-import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.ascript.KappaMod.patches.KappaCardFields;
+import com.ascript.KappaMod.patches.CardFields;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -37,7 +34,7 @@ public class BubbleBounce extends AbstractKappaCard {
     public BubbleBounce() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
-        KappaCardFields.bubbleOnUse.set(this, true);
+        CardFields.bubbleOnUse.set(this, true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

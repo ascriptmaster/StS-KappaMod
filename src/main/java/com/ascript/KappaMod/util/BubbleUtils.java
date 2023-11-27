@@ -2,16 +2,15 @@ package com.ascript.KappaMod.util;
 
 import com.ascript.KappaMod.bubbles.AbstractBubble;
 import com.ascript.KappaMod.bubbles.CardBubble;
-import com.ascript.KappaMod.patches.KappaFields;
+import com.ascript.KappaMod.patches.PlayerFields;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class BubbleUtils {
     public static List<AbstractBubble> getBubbles(AbstractPlayer p) {
-        return KappaFields.bubbles.get(p);
+        return PlayerFields.bubbles.get(p);
     }
 
     public static List<CardBubble> bubblesWithCards(AbstractPlayer p) {
@@ -32,8 +31,8 @@ public class BubbleUtils {
     }
 
     public static void resetBubbles(AbstractPlayer p) {
-        KappaFields.bubbles.get(p).clear();
-        increaseBubbleSlots(p, KappaFields.masterMaxBubbles.get(p));
+        PlayerFields.bubbles.get(p).clear();
+        increaseBubbleSlots(p, PlayerFields.masterMaxBubbles.get(p));
     }
 
     public static void increaseBubbleSlots(AbstractPlayer p, int amt) {

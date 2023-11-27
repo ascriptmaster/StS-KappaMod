@@ -4,5 +4,15 @@
   },
   "KappaMod:BubbleSelectionAction": {
     "TEXT": ["Bubble"]
+  },
+  "KappaMod:FloodPanel": {
+    "TEXT": [
+      "Flood (",
+      ")",
+      "Your current Flood level. It is currently ",
+      ", so Flood will ",
+      " each time you #yRipple."
+    ],
+    "EXTRA_TEXT": ["[#7fff00]Surging[]", "[#ff6563]Receding[]", "#gincrease", "#rdecrease"]
   }
 }
