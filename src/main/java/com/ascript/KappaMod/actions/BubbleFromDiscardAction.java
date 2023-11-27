@@ -43,7 +43,7 @@ public class BubbleFromDiscardAction extends AbstractGameAction {
                 }
 
                 if (p.discardPile.group.size() > amount) {
-                    AbstractDungeon.gridSelectScreen.open(p.discardPile, amount, TEXT[0], false, false, false, false);
+                    AbstractDungeon.gridSelectScreen.open(p.discardPile, amount, getText(), false, false, false, false);
                     tickDuration();
                     return;
                 }
@@ -61,6 +61,14 @@ public class BubbleFromDiscardAction extends AbstractGameAction {
             }
 
             tickDuration();
+        }
+    }
+
+    public String getText() {
+        if (amount == 1) {
+            return TEXT[1] + TEXT[0];
+        } else {
+            return TEXT[2] + amount + TEXT[3] + TEXT[0];
         }
     }
 }

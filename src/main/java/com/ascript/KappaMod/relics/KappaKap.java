@@ -18,19 +18,20 @@ public class KappaKap extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("KappaKap.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("KappaKapOutline.png"));
 
+    private static final int AMT = 4;
+
     public KappaKap() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
     }
 
     @Override
-    public void onPlayerEndTurn() {
-        this.flash();
-        addToBot(new RippleAction(AbstractDungeon.player, 1));
-        addToBot(new KappaKapAction());
+    public void atBattleStart() {
+        flash();
+        addToBot(new KappaKapAction(AMT));
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMT + DESCRIPTIONS[1];
     }
 }

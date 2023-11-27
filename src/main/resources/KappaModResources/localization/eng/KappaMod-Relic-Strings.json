@@ -43,7 +43,7 @@
     "NAME": "Kappa Kap",
     "FLAVOR": "Don't leave home without it!",
     "DESCRIPTIONS": [
-      "At the end of your turn, #ykappamod:Ripple 1. If #yFlood > 0, deal #b3 damage to a random enemy. Otherwise, gain #b3 Block."
+      "At the start of each combat, look at the top #b", " cards of your draw pile. #ykappamod:Bubble #b1 of them."
     ]
   }
 }

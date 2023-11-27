@@ -17,7 +17,6 @@ public class WaterCarpet extends AbstractKappaCard {
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -27,7 +26,7 @@ public class WaterCarpet extends AbstractKappaCard {
     private static final int COST = 1;
 
     public WaterCarpet() {
-        super(ID, NAME, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
         baseBlock = 4;
     }

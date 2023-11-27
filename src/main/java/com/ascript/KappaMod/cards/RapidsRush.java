@@ -49,6 +49,6 @@ public class RapidsRush extends AbstractKappaCard implements BubbleListeningCard
 
     @Override
     public void onBubble() {
-        addToBot(new ReduceCostAction(uuid, magicNumber));
+        addToTop(new ReduceCostAction(this));
     }
 }

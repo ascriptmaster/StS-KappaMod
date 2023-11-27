@@ -3,7 +3,7 @@
     "TEXT": ["Exhaust"]
   },
   "KappaMod:BubbleSelectionAction": {
-    "TEXT": ["Bubble"]
+    "TEXT": ["Bubble", "Choose a Card to ", "Choose ", " Cards to"]
   },
   "KappaMod:FloodPanel": {
     "TEXT": [
