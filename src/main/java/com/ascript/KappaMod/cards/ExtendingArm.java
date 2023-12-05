@@ -5,13 +5,12 @@ import com.ascript.KappaMod.actions.FloatAction;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
-import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ExtendingArm extends AbstractKappaCard {
@@ -42,14 +41,14 @@ public class ExtendingArm extends AbstractKappaCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new RippleAction(p, 1));
         addToBot(new FloatAction(magicNumber));
-        if (FloodPower.receding(p)) {
+        if (FloodPanel.receding()) {
             addToBot(new FloatAction(magicNumber));
         }
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = FloodPower.receding(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        glowColor = FloodPanel.receding() ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
     
     @Override

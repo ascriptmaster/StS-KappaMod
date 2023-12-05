@@ -93,7 +93,7 @@ public class DrownPower extends TwoAmountPower {
             description = DESCRIPTIONS[0] + amount2;
         }
         if (amount > 1) {
-            description += DESCRIPTIONS[2] + Math.ceil(amount2 / 2.0) + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
+            description += DESCRIPTIONS[2] + (int)Math.ceil(amount2 / 2.0) + DESCRIPTIONS[3] + amount + DESCRIPTIONS[4];
         } else {
             description += DESCRIPTIONS[5];
         }

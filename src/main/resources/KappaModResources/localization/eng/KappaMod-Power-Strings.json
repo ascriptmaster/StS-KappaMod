@@ -84,7 +84,7 @@
   "KappaMod:FloodPower": {
     "NAME": "Flood",
     "DESCRIPTIONS": [
-      "Playing kappamod:Ripple effects will change Flood by #b",
+      "Playing #yRipple effects will change Flood by #b",
       ". Flood direction will change when it reaches #b",
       "."
     ]

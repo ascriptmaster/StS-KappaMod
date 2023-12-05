@@ -1,12 +1,10 @@
-package com.ascript.KappaMod.vfx;
+package com.ascript.KappaMod.ui;
 
-import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 
@@ -22,11 +20,7 @@ public class FloodEffect {
     }
 
     public void update() {
-        int amt = 0;
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.hasPower(FloodPower.POWER_ID)) {
-            amt = p.getPower(FloodPower.POWER_ID).amount;
-        }
+        int amt = FloodPanel.getFlood();
         tY = 25.0f * amt - 100.0f;
     }
 

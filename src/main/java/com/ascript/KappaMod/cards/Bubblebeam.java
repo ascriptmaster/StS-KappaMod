@@ -40,7 +40,7 @@ public class Bubblebeam extends AbstractKappaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), KappaAttackEffect.SPLASH));
         addToBot(new FloatAction(magicNumber));
-        addToBot(new BubbleFromHandAction(p, magicNumber, false));
+        addToBot(new BubbleFromHandAction(p, magicNumber, false, false));
     }
 
     @Override

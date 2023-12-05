@@ -33,7 +33,7 @@ public class BubbleBlower extends AbstractKappaCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
-        addToBot(new BubbleFromHandAction(p, magicNumber, false));
+        addToBot(new BubbleFromHandAction(p, magicNumber, false, false));
     }
     
     @Override

@@ -4,13 +4,12 @@ import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
-import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -47,7 +46,7 @@ public class AquaJet extends AbstractKappaCard {
     @Override
     public void applyPowers() {
         int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
+        if (FloodPanel.surging()) {
             baseDamage++;
         }
         super.applyPowers();
@@ -58,7 +57,7 @@ public class AquaJet extends AbstractKappaCard {
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         int realBase = baseDamage;
-        if (FloodPower.surging(AbstractDungeon.player)) {
+        if (FloodPanel.surging()) {
             baseDamage++;
         }
         super.calculateCardDamage(mo);

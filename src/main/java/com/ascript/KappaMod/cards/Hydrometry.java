@@ -4,7 +4,7 @@ import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
-import com.ascript.KappaMod.powers.FloodPower;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -41,7 +41,7 @@ public class Hydrometry extends AbstractKappaCard {
         applyPowers();
         addToBot(new RippleAction(p, 2));
         addToBot(new GainBlockAction(p, block));
-        if (FloodPower.receding(p)) {
+        if (FloodPanel.receding()) {
             addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, block), block));
         }
     }

@@ -148,14 +148,14 @@ public class TheKappa extends CustomPlayer {
     
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f);
+        CardCrawlGame.sound.playA("ATTACK_POISON", 1.25f);
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
     }
     
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_DAGGER_1";
+        return "ATTACK_POISON";
     }
     
     @Override

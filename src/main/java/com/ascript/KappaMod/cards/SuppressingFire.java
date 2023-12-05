@@ -4,8 +4,8 @@ import com.ascript.KappaMod.KappaMod;
 import com.ascript.KappaMod.actions.RippleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.enums.KappaTags;
-import com.ascript.KappaMod.powers.FloodPower;
 import com.ascript.KappaMod.powers.SubmergePower;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -45,14 +45,14 @@ public class SuppressingFire extends AbstractKappaCard {
         addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         List<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
         monsters.stream().forEach(this::addSubmergeToBot);
-        if (FloodPower.receding(p)) {
+        if (FloodPanel.receding()) {
             monsters.stream().forEach(this::addSubmergeToBot);
         }
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = FloodPower.receding(AbstractDungeon.player) ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        glowColor = FloodPanel.receding() ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy() : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     private void addSubmergeToBot(AbstractMonster m) {

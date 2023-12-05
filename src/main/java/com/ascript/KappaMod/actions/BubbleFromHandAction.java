@@ -17,11 +17,13 @@ public class BubbleFromHandAction extends AbstractGameAction {
     public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
     private boolean isRandom;
+    private boolean anyNumber;
     private Function<AbstractCard, AbstractGameAction> followUpAction;
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
 
-    public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random) {
+    public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random, boolean anyNum) {
         this(player, amount, random, null);
+        anyNumber = anyNum;
     }
 
     public BubbleFromHandAction(AbstractPlayer player, int amount, boolean random, Function<AbstractCard, AbstractGameAction> followUp) {
@@ -41,7 +43,7 @@ public class BubbleFromHandAction extends AbstractGameAction {
             }
 
             int handSize = p.hand.size();
-            if (handSize <= amount) {
+            if (handSize <= amount && !anyNumber) {
                 this.amount = handSize;
 
                 for(int i = 0; i < handSize; ++i) {
@@ -55,17 +57,7 @@ public class BubbleFromHandAction extends AbstractGameAction {
             }
 
             if (!this.isRandom) {
-                if (this.amount < 0) {
-                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);
-                    AbstractDungeon.player.hand.applyPowers();
-                    tickDuration();
-                    return;
-                }
-
-                if (this.p.hand.size() > this.amount) {
-                    AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false);
-                }
-
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], amount < 0 ? 99 : amount, amount < 0 || anyNumber, amount < 0 || anyNumber);
                 AbstractDungeon.player.hand.applyPowers();
                 tickDuration();
             } else {

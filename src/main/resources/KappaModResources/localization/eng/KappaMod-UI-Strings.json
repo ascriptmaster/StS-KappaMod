@@ -11,7 +11,9 @@
       ")",
       "Your current Flood level. It is currently ",
       ", so Flood will ",
-      " each time you #yRipple."
+      " each time you #yRipple. It will become ",
+      " when Flood reaches #b",
+      "."
     ],
     "EXTRA_TEXT": ["[#7fff00]Surging[]", "[#ff6563]Receding[]", "#gincrease", "#rdecrease"]
   }

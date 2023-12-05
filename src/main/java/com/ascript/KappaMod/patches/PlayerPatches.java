@@ -3,6 +3,7 @@ package com.ascript.KappaMod.patches;
 import com.ascript.KappaMod.actions.PopAction;
 import com.ascript.KappaMod.bubbles.AbstractBubble;
 import com.ascript.KappaMod.characters.TheKappa;
+import com.ascript.KappaMod.ui.FloodPanel;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -74,7 +75,7 @@ public class PlayerPatches {
         @SpirePostfixPatch
         public static void resetFields(AbstractPlayer __instance) {
             BubbleUtils.resetBubbles(__instance);
-            PlayerFields.floodMgr.get(__instance).prep();
+            FloodPanel.prep();
         }
     }
 

@@ -5,6 +5,7 @@ import com.ascript.KappaMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -43,8 +44,8 @@ public class HydroCamouflagePower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
     }
 
     public void updateDescription() {
@@ -58,11 +59,12 @@ public class HydroCamouflagePower extends AbstractPower {
         this.description += DESCRIPTIONS[3];
     }
 
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0) {
-            this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS && damageAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
 
-        return 0;
+        return damageAmount;
     }
 }
