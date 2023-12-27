@@ -1,6 +1,7 @@
 package com.ascript.KappaMod.actions;
 
 import com.ascript.KappaMod.bubbles.CardBubble;
+import com.ascript.KappaMod.powers.PrimitiveBatteryPower;
 import com.ascript.KappaMod.util.BubbleUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,12 +33,16 @@ public class FloatAction extends AbstractGameAction {
             bubbles = bubbles.subList(0, amount);
         }
         if (!bubbles.isEmpty()) {
-            for (CardBubble bubble : bubbles) {
-                bubble.pop();
-            }
+            if (player.hasPower(PrimitiveBatteryPower.POWER_ID)) {
+                player.getPower(PrimitiveBatteryPower.POWER_ID).flashWithoutSound();
+            } else {
+                for (CardBubble bubble : bubbles) {
+                    bubble.pop();
+                }
 
-            BubbleUtils.getBubbles(player).removeAll(bubbles);
-            BubbleUtils.increaseBubbleSlots(player, bubbles.size());
+                BubbleUtils.getBubbles(player).removeAll(bubbles);
+                BubbleUtils.increaseBubbleSlots(player, bubbles.size());
+            }
         }
 
         if (amount > bubbles.size()) {

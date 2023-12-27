@@ -1,44 +1,42 @@
 package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
-import com.ascript.KappaMod.actions.BubbleAction;
 import com.ascript.KappaMod.characters.TheKappa;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.ascript.KappaMod.powers.CucumberFarmPower;
+import com.ascript.KappaMod.powers.EmpoweringBubblesPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Salvage extends AbstractKappaCard {
+public class CucumberFarm extends AbstractKappaCard {
 
-    public static final String ID = KappaMod.makeID(Salvage.class.getSimpleName());
-    public static final String IMG = KappaMod.makeCardPath("Salvage.png");
+    public static final String ID = KappaMod.makeID(CucumberFarm.class.getSimpleName());
+    public static final String IMG = KappaMod.makeCardPath("Power.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheKappa.Enums.COLOR_AQUA;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
-    public Salvage() {
+    private static final int MAGIC = 1;
+
+    public CucumberFarm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        exhaust = true;
+        baseMagicNumber = magicNumber = MAGIC;
     }
     
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat();
-        if (c.cost > 0) {
-            c.freeToPlayOnce = true;
-        }
-        addToBot(new BubbleAction(c));
+        addToBot(new ApplyPowerAction(p, p, new CucumberFarmPower(p, magicNumber), magicNumber));
     }
     
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeBaseCost(1);
             initializeDescription();
         }
     }

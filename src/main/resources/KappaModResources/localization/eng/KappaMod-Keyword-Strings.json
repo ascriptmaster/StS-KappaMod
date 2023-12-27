@@ -23,12 +23,12 @@
   {
     "PROPER_NAME": "Surging",
     "NAMES": ["surging"],
-    "DESCRIPTION": "Applies when Flood is above 0."
+    "DESCRIPTION": "Applies when Flood is increasing."
   },
   {
     "PROPER_NAME": "Receding",
     "NAMES": ["receding"],
-    "DESCRIPTION": "Applies when Flood is below 0."
+    "DESCRIPTION": "Applies when Flood is decreasing."
   },
   {
     "PROPER_NAME": "Submerge",

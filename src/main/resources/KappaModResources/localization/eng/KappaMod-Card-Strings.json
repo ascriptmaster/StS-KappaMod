@@ -150,7 +150,7 @@
   },
   "KappaMod:WaterSwing": {
     "NAME": "Water Bomb Giant Swing",
-    "DESCRIPTION": "Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Receding: Deal !KappaMod:SPLASH_DAMAGE! damage to ALL enemies."
+    "DESCRIPTION": "{@@}Deal !D! damage. NL kappamod:Ripple 1. NL kappamod:Receding: Deal {!Location!|0=!KappaMod:SPLASH_DAMAGE!|@=!D!} damage to ALL enemies."
   },
   "KappaMod:BubbleBarrier": {
     "NAME": "Bubble Barrier",
@@ -239,5 +239,9 @@
   "KappaMod:Salvage": {
     "NAME": "Salvage",
     "DESCRIPTION": "Add a random card to your kappamod:Bubbles. NL Exhaust."
+  },
+  "KappaMod:ShiraitoFalls": {
+    "NAME": "Shiraito Falls",
+    "DESCRIPTION": "Gain !B! Block. NL kappamod:Bubble."
   }
 }

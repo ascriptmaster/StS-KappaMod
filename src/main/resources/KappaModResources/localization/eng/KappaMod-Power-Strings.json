@@ -170,5 +170,26 @@
       "Whenever you #ykappamod:Ripple, gain #b",
       " #yStrength and #yDexterity this turn."
     ]
+  },
+  "KappaMod:CucumberFarmPower": {
+    "NAME": "Cucumber Farm",
+    "DESCRIPTIONS": [
+      "At the end of your turn, shuffle #b",
+      " #yCucumber into your draw pile.",
+      " #yCucumbers into your draw pile."
+    ]
+  },
+  "KappaMod:EnergyPower": {
+    "NAME": "Energy Up",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain ",
+      "[E] "
+    ]
+  },
+  "KappaMod:PrimitiveBatteryPower": {
+    "NAME": "Primitive Battery",
+    "DESCRIPTIONS": [
+      "#yFloat no longer adds cards from #yBubbles to hand."
+    ]
   }
 }
