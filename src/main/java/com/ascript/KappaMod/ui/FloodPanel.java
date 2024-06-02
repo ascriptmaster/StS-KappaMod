@@ -94,7 +94,11 @@ public class FloodPanel extends AbstractPanel {
 
     private String getText() {
         int offset = (direction+1) / 2;
-        return TEXT[2] + EX[offset] + TEXT[3] + EX[2+offset] + TEXT[4] + EX[1-offset] + TEXT[5] + ((direction + 1) / 2 * MAX_FLOOD) + TEXT[6];
+        String txt = TEXT[2] + EX[offset] + TEXT[3] + EX[2+offset] + TEXT[4] + EX[1-offset] + TEXT[5] + ((direction + 1) / 2 * MAX_FLOOD) + TEXT[6];
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(OverflowPower.POWER_ID)) {
+            txt += TEXT[7];
+        }
+        return txt;
     }
 
     public static int getFlood() {

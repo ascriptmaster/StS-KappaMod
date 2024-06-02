@@ -2,8 +2,10 @@ package com.ascript.KappaMod.cards;
 
 import basemod.AutoAdd;
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.actions.BubbleFromHandAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.ascript.KappaMod.patches.CardFields;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,17 +30,17 @@ public class BubbleBounce extends AbstractKappaCard {
     public static final CardColor COLOR = TheKappa.Enums.COLOR_AQUA;
 
     private static final int COST = 1;
-    private static final int BLOCK = 8;
+    private static final int MAGIC = 2;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public BubbleBounce() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = BLOCK;
-        CardFields.bubbleOnUse.set(this, true);
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new DrawCardAction(p, magicNumber));
+        addToBot(new BubbleFromHandAction(p, 1, false, false));
     }
 
     public AbstractCard makeCopy() {
@@ -48,7 +50,7 @@ public class BubbleBounce extends AbstractKappaCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

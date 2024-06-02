@@ -243,5 +243,14 @@
   "KappaMod:ShiraitoFalls": {
     "NAME": "Shiraito Falls",
     "DESCRIPTION": "Gain !B! Block. NL kappamod:Bubble."
+  },
+  "KappaMod:FluvialForm": {
+    "NAME": "Fluvial Form",
+    "DESCRIPTION": "{@@}{!Upgrades!|0=Ethereal. NL }At the start of your turn, apply !M! kappamod:Drown to ALL enemies."
+  },
+  "KappaMod:OptifluidicLaser": {
+    "NAME": "Optifluidic Laser",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies for each time this card was kappamod:Bubbled this combat.{!M!|>0= NL (Hits !M! times.)}",
+    "EXTENDED_DESCRIPTION": [ "This card hasn't been #yBubbled this combat!" ]
   }
 }

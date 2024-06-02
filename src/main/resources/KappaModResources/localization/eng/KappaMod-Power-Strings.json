@@ -191,5 +191,12 @@
     "DESCRIPTIONS": [
       "#yFloat no longer adds cards from #yBubbles to hand."
     ]
+  },
+  "KappaMod:FluvialPower": {
+    "NAME": "Fluvial Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #ykappamod:Drown to ALL enemies."
+    ]
   }
 }

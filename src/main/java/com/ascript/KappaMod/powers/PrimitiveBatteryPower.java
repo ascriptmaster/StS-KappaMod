@@ -41,6 +41,6 @@ public class PrimitiveBatteryPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + 15 + DESCRIPTIONS[1] + 25 + DESCRIPTIONS[2] + amount + DESCRIPTIONS[amount == 1 ? 3 : 4];
+        this.description = DESCRIPTIONS[0];
     }
 }

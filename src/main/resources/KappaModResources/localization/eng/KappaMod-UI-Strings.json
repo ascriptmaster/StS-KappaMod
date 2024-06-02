@@ -13,7 +13,8 @@
       ", so Flood will ",
       " each time you #yRipple. It will become ",
       " when Flood reaches #b",
-      "."
+      ".",
+      " #yOverflow is active. All #ySurging and #yReceding effects on cards will apply."
     ],
     "EXTRA_TEXT": ["[#7fff00]Surging[]", "[#ff6563]Receding[]", "#gincrease", "#rdecrease"]
   }
