@@ -198,5 +198,13 @@
       "At the start of your turn, apply #b",
       " #ykappamod:Drown to ALL enemies."
     ]
+  },
+  "KappaMod:WarehousePower": {
+    "NAME": "Warehouse",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yBubble #b",
+      "card.",
+      "cards."
+    ]
   }
 }

@@ -93,7 +93,7 @@
   },
   "KappaMod:Overcharge": {
     "NAME": "Overcharge",
-    "DESCRIPTION": "Draw !M! cards. Add 2 *Dazed to your discard pile."
+    "DESCRIPTION": "Draw !M! cards. Bubble a *Clog."
   },
   "KappaMod:Overflow": {
     "NAME": "Overflow",
@@ -251,6 +251,28 @@
   "KappaMod:OptifluidicLaser": {
     "NAME": "Optifluidic Laser",
     "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies for each time this card was kappamod:Bubbled this combat.{!M!|>0= NL (Hits !M! times.)}",
-    "EXTENDED_DESCRIPTION": [ "This card hasn't been #yBubbled this combat!" ]
+    "EXTENDED_DESCRIPTION": [
+      "This card hasn't been #yBubbled this combat!"
+    ]
+  },
+  "KappaMod:Clog": {
+    "NAME": "Clog",
+    "DESCRIPTION": "Unplayable. NL At end of turn, gain 1 Frail. Exhaust."
+  },
+  "KappaMod:Cucumber": {
+    "NAME": "Cucumber",
+    "DESCRIPTION": "Float !M!. NL Exhaust."
+  },
+  "KappaMod:CucumberFarm": {
+    "NAME": "Cucumber Farm",
+    "DESCRIPTION": "{@@}At the end of your turn, shuffle {!M!|1=a|@=!M!} *Cucumber{!M!|>1=s} into your draw pile."
+  },
+  "KappaMod:PrimitiveBattery": {
+    "NAME": "Primitive Battery",
+    "DESCRIPTION": "At the start of your turn, gain [E]. NL kappamod:Float no longer adds cards from kappamod:Bubbles."
+  },
+  "KappaMod:DragDown": {
+    "NAME": "Drag Down",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL kappamod:Submerged enemies. NL Apply !M! kappamod:Submerge to ALL enemies."
   }
 }

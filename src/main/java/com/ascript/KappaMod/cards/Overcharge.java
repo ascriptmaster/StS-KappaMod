@@ -1,6 +1,7 @@
 package com.ascript.KappaMod.cards;
 
 import com.ascript.KappaMod.KappaMod;
+import com.ascript.KappaMod.actions.BubbleAction;
 import com.ascript.KappaMod.characters.TheKappa;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -31,7 +32,7 @@ public class Overcharge extends AbstractKappaCard {
     public Overcharge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = this.magicNumber = DRAW;
-        this.cardsToPreview = new Dazed();
+        this.cardsToPreview = new Clog();
     }
 
     @Override
@@ -46,6 +47,6 @@ public class Overcharge extends AbstractKappaCard {
     @Override
     public void use(AbstractPlayer player, AbstractMonster monster) {
         addToBot(new DrawCardAction(player,magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new Dazed(), 2));
+        addToBot(new BubbleAction(new Clog()));
     }
 }
